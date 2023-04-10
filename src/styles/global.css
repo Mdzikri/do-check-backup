@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Avenir";
+  src: url("/font/Avenir/") format("eot"),
+    url("/font/Avenir/Avenir/Avenir-Regular.woff") format("woff"),
+    url("/font/Avenir/Avenir/Avenir-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Avenir";
+  font-weight: bold;
+  src: url("/font/Avenir/Avenir/Avenir-Bold.eot?#") format("eot"),
+    url("/font/Avenir/Avenir/Avenir-Bold.woff") format("woff"),
+    url("/font/Avenir/Avenir/Avenir-Bold.ttf") format("truetype");
+}
+
+body, .avenir {
+  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+}
