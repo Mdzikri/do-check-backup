@@ -77,7 +77,7 @@ const provideStatic = [
 
 export default function Provide() {
   return (
-    <div id="accordionExample" className="md:w-4/6 block m-auto mb-10">
+    <div id="accordionExample" className="md:w-5/6 mt-10 block m-auto mb-10">
       <div className="block text-center mb-4">
         <h4 className="md:text-[34px] font-lg">We Provide</h4>
       </div>

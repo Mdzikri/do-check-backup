@@ -6,14 +6,15 @@ import Hero from "../components/hero";
 import Provide from "../components/provide";
 
 import "tw-elements";
+import News from "../components/news";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main>
       <Navbar />
       <Hero />
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <Provide />
+      <News />
       <Footer />
     </main>
   );
