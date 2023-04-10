@@ -7,6 +7,7 @@ import Provide from "../components/provide";
 
 import "tw-elements";
 import News from "../components/news";
+import CoachSay from "../components/coachSay";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -15,6 +16,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <Hero />
       <Provide />
       <News />
+      <CoachSay />
       <Footer />
     </main>
   );

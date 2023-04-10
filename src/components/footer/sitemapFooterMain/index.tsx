@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./style.scss";
+
 const linkStatic = [
   {
     id: 0,
@@ -44,7 +46,7 @@ export default function SitemapFooterMain() {
         <div className="md:flex flex-col">
           {linkStatic.map(({ href, title }, idx) => (
             <a className="mt-3" key={idx} href={href}>
-              <span className="text-white hover:text-[#edebeb]">{title}</span>
+              <span className="text-white un">{title}</span>
             </a>
           ))}
         </div>
