@@ -1,10 +1,14 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import Footer from "../components/footer";
+import Navbar from "../components/navbar";
+import Hero from "../components/hero";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main>
+      <Navbar />
+      <Hero />
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <Footer />
     </main>
