@@ -1,13 +1,19 @@
 import React from "react";
 
 import Hug from "../../assets/images/hug.png";
+import Yolo from "../../assets/images/yolo.png";
+
+import "./style.scss";
 
 export default function Hero() {
   return (
     <>
       <div className="bg-[#d4ecfd] relative">
-        <div className="absolute bottom-0">
+        <div className="absolute hug bottom-0">
           <img className="w-8/12" alt="hug" src={Hug} />
+        </div>
+        <div className="absolute yolo top-20 right-0 flex justify-end">
+          <img className="w-8/12 " alt="hug" src={Yolo} />
         </div>
         <div className="relative isolate px-6 pt-3 lg:px-8">
           <div
