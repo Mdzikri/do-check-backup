@@ -46,12 +46,17 @@ export default function News() {
         className={`mb-10 px-10 py-5 w-100 md:max-h-[550px] bg-[#F6F6F6] w-full rounded-xl overflow-hidden shadow-sm`}
       >
         <div className="px-6 py-4">
-          <div className="font-medium text-2xl mb-2 text-[#222222]">
+          <div className="font-medium md:text-base lg:text-xl mb-2 text-[#222222]">
             {title}
           </div>
           <p className="text-gray-700 text-sm">{value}</p>
           <div className="mt-6">
-            <img className="rounded-xl w-full" src={imageSrc} alt={title} />
+            <img
+              draggable="false"
+              className="rounded-xl w-full"
+              src={imageSrc}
+              alt={title}
+            />
           </div>
         </div>
       </div>
@@ -65,6 +70,7 @@ export default function News() {
           <Then>
             <div className="relative">
               <img
+                draggable="false"
                 className="absolute top-0"
                 src={CutterUpper}
                 alt="cutter-bottom"
@@ -74,10 +80,13 @@ export default function News() {
                 className={`bg-[#F6F6F6] absolute top-[15rem] ml-7 md:max-h-[550px] px-10 py-5 w-full rounded-xl mb-10 w-100 overflow-hidden shadow-sm`}
               >
                 <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2">{title}</div>
+                  <div className="font-bold md:text-base lg:text-xl mb-2">
+                    {title}
+                  </div>
                   <p className="text-gray-700 text-sm">{value}</p>
                   <div className="mt-6">
                     <img
+                      draggable="false"
                       className="rounded-xl w-full"
                       src={imageSrc}
                       alt={title}
@@ -86,7 +95,8 @@ export default function News() {
                 </div>
               </div>
               <img
-                className="absolute md:-bottom-[26rem]"
+                draggable="false"
+                className="absolute md:-bottom-[10rem] lg:-bottom-[26rem]"
                 src={CutterBottom}
                 alt="cutter-bottom"
               />

@@ -7,7 +7,7 @@ import UnionFooter from "../../assets/images/union-bottom.png";
 export default function Footer() {
   return (
     <footer className="bg-[#2A9EF4] relative">
-      <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-start md:justify-between">
+      <div className="w-full mx-auto max-w-screen-xl z-50 p-4 md:flex md:items-start md:justify-between">
         <div className="md:flex flex-col mt-16">
           <div className="mb-6">
             <Logo />
@@ -25,7 +25,12 @@ export default function Footer() {
         </div>
         <SitemapFooterMain />
       </div>
-      <img className="absolute bottom-0" alt="union-footer" src={UnionFooter} />
+      <img
+        draggable="false"
+        className="absolute  md:overflow-hidden md:bottom-96 lg:bottom-20 -z-0"
+        alt="union-footer"
+        src={UnionFooter}
+      />
     </footer>
   );
 }

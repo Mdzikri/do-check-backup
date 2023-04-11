@@ -10,10 +10,20 @@ export default function Hero() {
     <>
       <div className="bg-[#d4ecfd] relative">
         <div className="absolute hug bottom-0">
-          <img className="w-8/12" alt="hug" src={Hug} />
+          <img
+            draggable="false"
+            className="md:w-2/5 lg:w-8/12"
+            alt="hug"
+            src={Hug}
+          />
         </div>
         <div className="absolute yolo top-20 right-0 flex justify-end">
-          <img className="w-8/12 " alt="hug" src={Yolo} />
+          <img
+            draggable="false"
+            className="md:w-1/3 md:mr-10 lg:w-8/12 "
+            alt="hug"
+            src={Yolo}
+          />
         </div>
         <div className="relative isolate px-6 pt-3 lg:px-8">
           <div
@@ -31,7 +41,7 @@ export default function Hero() {
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
                   href="#"
-                  className="rounded-[100px] bg-[#2A9EF4] px-3.5 py-2.5 text-lg text-white shadow-sm hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2A9EF4]"
+                  className="rounded-[100px] bg-[#2A9EF4] pt-5 pb-5 pl-16 pr-16 text-lg text-white shadow-sm hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2A9EF4]"
                 >
                   Mulai Konsultasi
                 </a>
