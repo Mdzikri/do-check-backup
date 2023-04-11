@@ -1,28 +1,42 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
+import { Link } from "gatsby";
 import Logo from "../../assets/images/logo-navbar.png";
 
-const navbarStatic = [
-  {
-    id: 0,
-    title: "Beranda",
-    href: "/",
-    isActive: true,
-  },
-  {
-    id: 1,
-    title: "Tentang Kami",
-    href: "/",
-    isActive: false,
-  },
-  {
-    id: 2,
-    title: "Wool for Company",
-    href: "/",
-    isActive: false,
-  },
-];
-
 export default function Navbar() {
+  const [activeNavbar, setActiveNavbar] = useState([
+    {
+      id: 0,
+      title: "Beranda",
+      href: "/",
+      isActive: true,
+    },
+    {
+      id: 1,
+      title: "Tentang Kami",
+      href: "/tentang-kami",
+      isActive: false,
+    },
+    {
+      id: 2,
+      title: "Wool for Company",
+      href: "/wool-for-company",
+      isActive: false,
+    },
+  ]);
+
+  const navbarHandler = useCallback(
+    (id: number) => {
+      setActiveNavbar(
+        activeNavbar.map((item) => {
+          item.isActive = false;
+          if (item.id === id) item.isActive = true;
+          return item;
+        })
+      );
+    },
+    [setActiveNavbar]
+  );
+
   return (
     <header className="absolute inset-x-0 top-0 z-50">
       <nav
@@ -30,9 +44,11 @@ export default function Navbar() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <img className="h-11 w-auto" src={Logo} alt="logo" />
-          </a>
+          <Link to="/" className="-m-1.5 p-1.5">
+            <div>
+              <img className="h-11 w-auto" src={Logo} alt="logo" />
+            </div>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -57,16 +73,20 @@ export default function Navbar() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          {navbarStatic.map((item, idx) => (
-            <a
+          {activeNavbar.map((item, idx) => (
+            <Link
+              onClick={() => navbarHandler(item.id)}
               key={idx}
-              href={item.href}
-              className={`text-sm font-semibold leading-6 ${
-                item.isActive ? "text-[#2A9EF4]" : "text-gray-900"
-              } hover:text-[#2A9EF4]`}
+              to={item.href}
             >
-              {item.title}
-            </a>
+              <span
+                className={`text-sm font-semibold leading-6 ${
+                  item.isActive ? "text-[#2A9EF4]" : "text-gray-900"
+                } hover:text-[#2A9EF4]`}
+              >
+                {item.title}
+              </span>
+            </Link>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -87,7 +107,7 @@ export default function Navbar() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {navbarStatic.map((item, idx) => (
+                {activeNavbar.map((item, idx) => (
                   <a
                     key={idx}
                     href={item.href}

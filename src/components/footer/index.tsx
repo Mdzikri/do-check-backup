@@ -25,12 +25,12 @@ export default function Footer() {
         </div>
         <SitemapFooterMain />
       </div>
-      <img
+      {/* <img
         draggable="false"
         className="absolute  md:overflow-hidden md:bottom-96 lg:bottom-20 -z-0"
         alt="union-footer"
         src={UnionFooter}
-      />
+      /> */}
     </footer>
   );
 }
