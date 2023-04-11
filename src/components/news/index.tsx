@@ -1,9 +1,12 @@
-import React, { useCallback, useMemo } from "react";
+import React, { useCallback } from "react";
 import { Else, If, Then } from "react-if";
 
 import FirstNews from "../../assets/images/first-news.png";
 import SecondNews from "../../assets/images/second-news.png";
 import ThirdNews from "../../assets/images/third-news.png";
+
+import CutterBottom from "../../assets/images/Vector 711.png";
+import CutterUpper from "../../assets/images/Vector 710.png";
 
 interface RenderCard {
   idx: number;
@@ -61,6 +64,11 @@ export default function News() {
         <If condition={idx % 2 == 1}>
           <Then>
             <div className="relative">
+              <img
+                className="absolute top-0"
+                src={CutterUpper}
+                alt="cutter-bottom"
+              />
               <div
                 key={idx}
                 className={`bg-[#F6F6F6] absolute top-[15rem] ml-7 md:max-h-[550px] px-10 py-5 w-full rounded-xl mb-10 w-100 overflow-hidden shadow-sm`}
@@ -77,6 +85,11 @@ export default function News() {
                   </div>
                 </div>
               </div>
+              <img
+                className="absolute md:-bottom-[26rem]"
+                src={CutterBottom}
+                alt="cutter-bottom"
+              />
             </div>
           </Then>
           <Else>

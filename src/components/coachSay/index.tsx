@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import Coach from "../../assets/images/coach.jpg";
+import Dancing from "../../assets/images/dancing.png";
 
 import "swiper/css";
 import Navigation from "./navigation";
@@ -10,7 +11,7 @@ export default function CoachSay() {
   const swiperRef = useRef<any>();
 
   return (
-    <div className="coach-slider w-4/6 mb-20 mt-10 block m-auto bg-white rounded-sm relative shadow-2xl p-10">
+    <div className="coach-slider z-10 w-4/6 mb-28 mt-10 relative block m-auto bg-white rounded-sm shadow-2xl p-10">
       <h3 className="font-medium md:text-[40px] tracking-[-0.013em] leading-[46px] md:w-1/2 mb-6">
         What our beloved Coach say
       </h3>
@@ -70,6 +71,11 @@ export default function CoachSay() {
       <h3 className="font-normal mt-10 md:text-[30px] tracking-[-0.013em] leading-[40px] md:w-1/2 mb-6">
         We realize your dream building anytime
       </h3>
+      <img
+        src={Dancing}
+        alt="dancing"
+        className="w-4/12 absolute -right-36 -bottom-2"
+      />
     </div>
   );
 }

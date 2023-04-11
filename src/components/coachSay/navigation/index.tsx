@@ -1,5 +1,4 @@
 import React from "react";
-import { useSwiper } from "swiper/react";
 import LeftArrow from "../../../assets/images/ArrowLeft.png";
 import RightArrow from "../../../assets/images/ArrowRight.png";
 
