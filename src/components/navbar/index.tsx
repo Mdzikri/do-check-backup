@@ -1,8 +1,13 @@
-import React, { useCallback, useState } from "react";
-import { Link } from "gatsby";
+import React, { useCallback, useEffect, useState } from "react";
+import { Link, graphql } from "gatsby";
 import Logo from "../../assets/images/logo-navbar.png";
+import { isEqual, size } from "lodash";
 
-export default function Navbar() {
+interface NavbarProps {
+  location: string;
+}
+
+export default function Navbar({ location }: NavbarProps) {
   const [activeNavbar, setActiveNavbar] = useState([
     {
       id: 0,
@@ -24,18 +29,25 @@ export default function Navbar() {
     },
   ]);
 
-  const navbarHandler = useCallback(
-    (id: number) => {
+  useEffect(() => {
+    if (location) {
+      const path = location.substring(0, size(location) - 1);
       setActiveNavbar(
         activeNavbar.map((item) => {
           item.isActive = false;
-          if (item.id === id) item.isActive = true;
+          if (isEqual(item.href, path)) item.isActive = true;
           return item;
         })
       );
-    },
-    [setActiveNavbar]
-  );
+    } else
+      setActiveNavbar(
+        activeNavbar.map((item) => {
+          item.isActive = false;
+          if (isEqual(item.id, 0)) item.isActive = true;
+          return item;
+        })
+      );
+  }, [location]);
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
@@ -74,11 +86,7 @@ export default function Navbar() {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {activeNavbar.map((item, idx) => (
-            <Link
-              onClick={() => navbarHandler(item.id)}
-              key={idx}
-              to={item.href}
-            >
+            <Link key={idx} to={item.href}>
               <span
                 className={`text-sm font-semibold leading-6 ${
                   item.isActive ? "text-[#2A9EF4]" : "text-gray-900"

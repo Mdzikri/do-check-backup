@@ -11,7 +11,7 @@ const linkStatic = [
   {
     id: 1,
     title: "Wool for Company",
-    href: "/",
+    href: "/wool-for-company",
   },
   {
     id: 2,

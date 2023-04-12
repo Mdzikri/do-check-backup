@@ -41,7 +41,7 @@ const staticFeature = [
 
 export default function OurFeature() {
   return (
-    <div className="flex lg:py-24 h-full items-stretch px-14 m-auto">
+    <div className="lg:flex md:grid md:grid-cols-2 md:gap-5 py-24 h-full items-stretch px-14 m-auto">
       {staticFeature.map(({ color, icon, title, value }, idx) => (
         <OurFeatureCard
           src={icon}

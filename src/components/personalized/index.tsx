@@ -17,7 +17,7 @@ const itemStatic = [
 
 export default function Personalize() {
   return (
-    <div className="flex items-center px-24 mt-24 mb-24">
+    <div className="flex items-center lg:px-24 md:px-4 mt-24 mb-24">
       <img className="w-5/6" draggable={false} src={LadySad} alt="lady-sad" />
       <div className="wrapper">
         <h3 className="font-bold text-3xl mb-8">Personalised Care for All</h3>

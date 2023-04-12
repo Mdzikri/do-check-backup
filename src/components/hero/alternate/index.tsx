@@ -16,10 +16,10 @@ export default function HeroAlternate() {
           <img
             draggable={false}
             alt="misc-1"
-            className="absolute lg:-left-[143.7px] lg-:rotate-[98.9deg]"
+            className="absolute lg:-left-[143.7px] md:-left-[200px] md:top-0 lg-:rotate-[98.9deg]"
             src={MiscOne}
           />
-          <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:pt-32 lg:pb-0">
+          <div className="mx-auto max-w-2xl md:pt-36 lg:py-32 z-40 lg:pt-32 lg:pb-0">
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                 Your Employees Need to Improve Their Mental Health, Right Now!

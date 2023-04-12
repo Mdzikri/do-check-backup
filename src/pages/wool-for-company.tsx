@@ -8,17 +8,19 @@ import OurFeature from "../components/ourFeature";
 import Toolkit from "../components/toolkit";
 import Personalize from "../components/personalized";
 import WhyUs from "../components/whyUs";
+import Productivity from "../components/productivity";
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage: React.FC<PageProps> = ({ location }) => {
   return (
     <main>
-      <Navbar />
+      <Navbar location={location.pathname} />
       <HeroAlternate />
       <OurFeature />
       <Toolkit />
       <Personalize />
       <WhyUs />
-      <Footer />
+      <Productivity />
+      <Footer withContactAdmin />
     </main>
   );
 };
