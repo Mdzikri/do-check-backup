@@ -10,10 +10,10 @@ import Personalize from "../components/personalized";
 import WhyUs from "../components/whyUs";
 import Productivity from "../components/productivity";
 
-const IndexPage: React.FC<PageProps> = ({ location }) => {
+const IndexPage: React.FC<PageProps> = () => {
   return (
     <main>
-      <Navbar location={location.pathname} />
+      <Navbar />
       <HeroAlternate />
       <OurFeature />
       <Toolkit />

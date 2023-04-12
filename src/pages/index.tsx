@@ -1,6 +1,5 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import "tw-elements/dist/css/index.min.css";
 
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";

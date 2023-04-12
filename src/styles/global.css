@@ -17,6 +17,7 @@
     url("/font/Avenir/Avenir/Avenir-Bold.ttf") format("truetype");
 }
 
-body, .avenir {
+body,
+.avenir {
   font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 }
