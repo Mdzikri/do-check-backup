@@ -1,13 +1,10 @@
-import React, { useCallback, useEffect, useState } from "react";
-import { Link, graphql } from "gatsby";
-import Logo from "../../assets/images/logo-navbar.png";
+import { Link } from "gatsby";
 import { isEqual, size } from "lodash";
+import React, { useEffect, useState } from "react";
 
-interface NavbarProps {
-  location: string;
-}
+import Logo from "../../assets/images/logo-navbar.png";
 
-export default function Navbar({ location }: NavbarProps) {
+export default function Navbar() {
   const [activeNavbar, setActiveNavbar] = useState([
     {
       id: 0,
@@ -30,6 +27,7 @@ export default function Navbar({ location }: NavbarProps) {
   ]);
 
   useEffect(() => {
+    const location = window.location.pathname;
     if (location) {
       const path = location.substring(0, size(location) - 1);
       setActiveNavbar(
@@ -47,7 +45,7 @@ export default function Navbar({ location }: NavbarProps) {
           return item;
         })
       );
-  }, [location]);
+  }, []);
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">

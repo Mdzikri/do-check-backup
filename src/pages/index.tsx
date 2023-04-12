@@ -1,5 +1,6 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
+import "tw-elements/dist/css/index.min.css";
 
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
@@ -7,7 +8,6 @@ import Hero from "../components/hero";
 import Provide from "../components/provide";
 import Us from "../components/us";
 
-import "tw-elements";
 import News from "../components/news";
 import CoachSay from "../components/coachSay";
 import Feature from "../components/feature";
