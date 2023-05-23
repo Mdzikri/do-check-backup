@@ -1,10 +1,10 @@
 import React from "react";
 import SitemapFooterMain from "./sitemapFooterMain";
+import { If } from "react-if";
 
 import Logo from "../logo";
 import UnionFooter from "../../assets/images/union-bottom.png";
 import Hug from "../../assets/images/hug.png";
-import { If } from "react-if";
 
 interface FooterProps {
   withContactAdmin?: boolean;

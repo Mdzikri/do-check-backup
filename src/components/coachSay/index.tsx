@@ -25,7 +25,7 @@ export default function CoachSay() {
           swiperRef.current = swiper;
         }}
       >
-        {new Array(10).fill(0).map((item, idx) => (
+        {new Array(10).fill(0).map((_, idx) => (
           <SwiperSlide key={idx} className="coach-slider__wrp swiper-wrapper">
             <div className="grid md:gap-4 md:grid-cols-1 lg:grid-cols-2">
               <div className="img-coach md:flex md:items-center md:justify-center">

@@ -1,8 +1,9 @@
 import { Link } from "gatsby";
 import { isEqual, size } from "lodash";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 import Logo from "../../assets/images/logo-navbar.png";
+import { ActiveNavbarKeys, INavbarHandler } from "../../interface/global.interface";
 
 export default function Navbar() {
   const [activeNavbar, setActiveNavbar] = useState([
@@ -26,25 +27,22 @@ export default function Navbar() {
     },
   ]);
 
+  const navbarHandler: INavbarHandler<ActiveNavbarKeys> = useCallback((key, other) => setActiveNavbar(
+    activeNavbar.map((item) => {
+      item.isActive = false;
+      if (isEqual(item[key], other)) item.isActive = true;
+      return item;
+    })
+  ), [isEqual, activeNavbar, setActiveNavbar])
+
   useEffect(() => {
     const location = window.location.pathname;
-    if (location) {
-      const path = location.substring(0, size(location) - 1);
-      setActiveNavbar(
-        activeNavbar.map((item) => {
-          item.isActive = false;
-          if (isEqual(item.href, path)) item.isActive = true;
-          return item;
-        })
-      );
-    } else
-      setActiveNavbar(
-        activeNavbar.map((item) => {
-          item.isActive = false;
-          if (isEqual(item.id, 0)) item.isActive = true;
-          return item;
-        })
-      );
+    const path = location.substring(0, size(location) - 1);
+
+    if (location && path)
+      navbarHandler('href', path)
+    else
+      navbarHandler('id', 0)
   }, []);
 
   return (
@@ -86,9 +84,8 @@ export default function Navbar() {
           {activeNavbar.map((item, idx) => (
             <Link key={idx} to={item.href}>
               <span
-                className={`text-sm font-semibold leading-6 ${
-                  item.isActive ? "text-[#2A9EF4]" : "text-gray-900"
-                } hover:text-[#2A9EF4]`}
+                className={`text-sm font-semibold leading-6 ${item.isActive ? "text-[#2A9EF4]" : "text-gray-900"
+                  } hover:text-[#2A9EF4]`}
               >
                 {item.title}
               </span>
