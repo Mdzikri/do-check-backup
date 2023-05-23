@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Us from "../assets/images/us.webp";
+import Us from "../../assets/images/us.webp";
 
 
 export default function OurTeam() {
