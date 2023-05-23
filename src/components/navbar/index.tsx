@@ -4,10 +4,8 @@ import React, { useCallback, useEffect, useState } from "react";
 
 import Logo from "../../assets/images/logo-navbar.png";
 import { ActiveNavbarKeys, INavbarHandler } from "../../interface/global.interface";
-import usePeople from "../../hooks/usePeople";
 
 export default function Navbar() {
-  const { data } = usePeople()
   const [activeNavbar, setActiveNavbar] = useState([
     {
       id: 0,
@@ -47,7 +45,6 @@ export default function Navbar() {
       navbarHandler('id', 0)
   }, []);
 
-  useEffect(() => console.log('data', data), [data])
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">

@@ -4,25 +4,19 @@ import { Else, If, Then } from "react-if";
 import Union from "../../assets/images/union-bottom.png";
 import Unmotivated from "../../assets/images/unmotivated.png";
 import SadBoy from "../../assets/images/sadboy.png";
+import useData from "../../hooks/useData";
 
-const staticItem = [
-  {
-    id: 0,
-    title: "Minim prestasi di kantor",
-    value:
-      "Target ga tercapai, dimarahin atasan, dan udah gitu ga dapet bonus dari kantor, hadeeuh",
-    imgSrc: Unmotivated,
-  },
-  {
-    id: 1,
-    title: "Kurang termotivasi",
-    value:
-      "Merasa kerjaan kantor gitu-gitu aja, ga ada perubahan atau keinginan yang dicapai",
-    imgSrc: SadBoy,
-  },
-];
+const staticImage = [Unmotivated, SadBoy]
 
 export default function Feature() {
+  const { data } = useData()
+
+
+  const featureItem = data?.featureItem.map((item, idx) => ({
+    ...item,
+    imgSrc: staticImage[idx]
+  }))
+
   return (
     <div className="relative overflow-hidden">
       <div className="absolute md:top-64 lg:top-24 select-none">
@@ -42,7 +36,7 @@ export default function Feature() {
         <div className="absolute top-0 bg-[#d4ecfd] w-screen md:h-[23vh] lg:h-[46.3vh]"></div>
       </div>
       <div className="flex w-8/12 m-auto flex-col items-center justify-center">
-        {staticItem.map((item, idx) => (
+        {featureItem?.map((item, idx) => (
           <If condition={idx % 2 == 0}>
             <Then>
               <div className={`flex self-start z-50 items-center`} key={idx}>

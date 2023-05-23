@@ -1,5 +1,38 @@
-[
-  { "name": "John Doe", "age": 30 },
-  { "name": "Jane Smith", "age": 25 },
-  { "name": "Bob Johnson", "age": 35 }
-]
+{
+  "featureItem": [
+    {
+      "id": 0,
+      "title": "Minim prestasi di kantor",
+      "value": "Target ga tercapai, dimarahin atasan, dan udah gitu ga dapet bonus dari kantor, hadeeuh",
+      "imgSrc": ""
+    },
+    {
+      "id": 1,
+      "title": "Kurang termotivasi",
+      "value": "Merasa kerjaan kantor gitu-gitu aja, ga ada perubahan atau keinginan yang dicapai",
+      "imgSrc": ""
+    }
+  ],
+  "newsItem": [
+    [
+      {
+        "id": 0,
+        "imgSrc": "",
+        "title": "Coaching: The Best Practice to Improve Your Mental Health @work",
+        "value": "Disini kamu akan dicoaching bagaimana cara praktis buat meningkatkan mental health kamu di tempat kerja supaya kamu bisa lebih produktif dan lebih banyak prestasi"
+      },
+      {
+        "id": 1,
+        "imgSrc": "",
+        "title": "Problem Worksheet Siap Pakai",
+        "value": "Agar membantu kamu memudahkan proses coaching tersebut"
+      },
+      {
+        "id": 2,
+        "imgSrc": "",
+        "title": "Team Support & Exclusive Community",
+        "value": "Komunitas untuk bisa saling berdiskusi, membangun lingkungan yang produktif, bertanya soal materi yang ada di dalam event, dan juga akan ada event menyenangkan lain di dalamnya"
+      }
+    ]
+  ]
+}
