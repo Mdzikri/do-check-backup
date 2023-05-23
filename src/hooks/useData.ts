@@ -8,9 +8,31 @@ interface ICommonStruct {
   imgSrc: any;
 }
 
+interface ICommonAlternativeStruct {
+  id: number;
+  title: string;
+  src: any;
+  description: string;
+}
+
 interface Data {
   featureItem: ICommonStruct[];
   newsItem: ICommonStruct[];
+  timelineItem: ICommonAlternativeStruct[];
+  ourValues: ICommonAlternativeStruct[];
+  featureSecondItem: {
+    id: number;
+    title: string;
+    value: string;
+    color: string;
+    icon: any;
+  }[];
+  analyticsBusiness: {
+    id: number;
+    title: string;
+    value: string;
+    description: string;
+  }[];
 }
 
 interface QueryJson<T> {
@@ -37,6 +59,31 @@ export default function useData() {
             imgSrc
             title
             value
+          }
+          timelineItem {
+            id
+            title
+            src
+            description
+          }
+          ourValues {
+            id
+            title
+            src
+            description
+          }
+          featureSecondItem {
+            id
+            title
+            value
+            color
+            icon
+          }
+          analyticsBusiness {
+            id
+            title
+            value
+            description
           }
         }
       }

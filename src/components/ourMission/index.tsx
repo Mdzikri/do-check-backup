@@ -2,6 +2,7 @@ import React from "react";
 
 import Gas from "../../assets/images/gas.png";
 import UnionFull from "../../assets/images/union-full.png";
+import useData from "../../hooks/useData";
 
 const ourValuesStatic = [
   {
@@ -47,7 +48,16 @@ const ourValuesStatic = [
   },
 ];
 
+const staticImage = [Gas, Gas, Gas, Gas, Gas, Gas]
+
 export default function OurMission() {
+  const { data } = useData()
+
+  const ourValues = data?.ourValues?.map((item, idx) => ({
+    ...item,
+    src: staticImage[idx]
+  }));
+
   return (
     <div className="flex m-auto px-24 flex-col mt-20 mb-64 relative">
       <img
@@ -71,7 +81,7 @@ export default function OurMission() {
       <div className="flex flex-col items-center">
         <h3 className="text-4xl font-bold color-[#3E3E3E] mb-12">Our Values</h3>
         <div className="grid grid-cols-3 gap-10 w-10/12">
-          {ourValuesStatic.map(({ description, src, title }, idx) => (
+          {ourValues?.map(({ description, src, title }, idx) => (
             <a key={idx} href="#" className="block max-w-sm p-6 bg-transparent">
               <div className="flex justify-center items-center rounded-xl mb-4 bg-[#FCEEDD] w-[60px] h-[60px]">
                 <img
