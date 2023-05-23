@@ -1,0 +1,130 @@
+---
+featureItem:
+  - id: 0
+    title: Minim prestasi di kantor
+    value:
+      Target ga tercapai, dimarahin atasan, dan udah gitu ga dapet bonus dari kantor,
+      hadeeuh
+    imgSrc: ""
+  - id: 1
+    title: Kurang termotivasi
+    value:
+      Merasa kerjaan kantor gitu-gitu aja, ga ada perubahan atau keinginan yang
+      dicapai
+    imgSrc: ""
+newsItem:
+  - - id: 0
+      imgSrc: ""
+      title: "Coaching: The Best Practice to Improve Your Mental Health @work"
+      value:
+        Disini kamu akan dicoaching bagaimana cara praktis buat meningkatkan mental
+        health kamu di tempat kerja supaya kamu bisa lebih produktif dan lebih banyak
+        prestasi
+    - id: 1
+      imgSrc: ""
+      title: Problem Worksheet Siap Pakai
+      value: Agar membantu kamu memudahkan proses coaching tersebut
+    - id: 2
+      imgSrc: ""
+      title: Team Support & Exclusive Community
+      value:
+        Komunitas untuk bisa saling berdiskusi, membangun lingkungan yang produktif,
+        bertanya soal materi yang ada di dalam event, dan juga akan ada event menyenangkan
+        lain di dalamnya
+timelineItem:
+  - id: 0
+    title: "2021"
+    src: ""
+    description:
+      Tahun 2021, lahirlah platform digital DoCheck untuk active share todo
+      list dengan harapan Generasi Milenial dan Generasi Z bisa meningkatkan produktivitas
+      dengan platform DoCheck dan saling berbagi tacit knowledge
+  - id: 1
+    title: "2022"
+    src: ""
+    description:
+      Tahun 2022, DoZine dibuat sebagai sebuah platform majalah digital,
+      khusus Generasi Milenial dan Generasi Z tuk bisa bercerita tentang knowledge,
+      gaya hidup, dan karya
+  - id: 2
+    title: "2023"
+    src: ""
+    description:
+      Tahun 2023, lahir sebuah digital mental health platform bernama Wool
+      (We Open Our Lives), untuk fokus pada perbaikan mental health Generasi Milenial
+      dan Generasi Z.
+ourValues:
+  - id: 0
+    title: Solar System
+    src: Gas
+    description:
+      Make the appearance of a mobile application that has quality and increases
+      user convenience
+  - id: 1
+    title: Recycling
+    src: Gas
+    description:
+      Help create a website and redesign it so that it becomes a website
+      that is more trendy and looks fresh
+  - id: 2
+    title: Plant Trees
+    src: Gas
+    description:
+      Create customizable illustrations with attractive designs that are
+      made visually through high creativity
+  - id: 3
+    title: Clean Energy
+    src: Gas
+    description:
+      Change the appearance of a design into code that will be made into
+      an amazing website
+  - id: 4
+    title: Eco System
+    src: Gas
+    description:
+      Create 2d / 3d video animation in a short period of time designed to
+      promote a company product
+  - id: 5
+    title: Water Refine
+    src: Gas
+    description: Help your business grow with our SEO Experts
+featureSecondItem:
+  - id: 0
+    title: Karyawan Tidak Produktif
+    value:
+      Riset dari Gallup, Inc. melaporkan bahwa 76% karyawan di Indonesia tidak
+      termotivasi dengan pekerjaan mereka
+    color: "#FEF1D8"
+    icon: Employee
+  - id: 1
+    title: Karyawan Cenderung Absen
+    value:
+      Masalah kesehatan mental menyebabkan masing-masing karyawan kehilangan 27
+      hari kerja per tahun
+    color: "#E5DEFD"
+    icon: User
+  - id: 2
+    title: Well Organized
+    value: And if she hasn’t been rewritten, then they are still using her.
+    color: "#FBE0C7"
+    icon: Connection
+  - id: 3
+    title: Clean Code
+    value: Copy Writers ambushed her, made her drunk with Longe and Parole.
+    color: "#BCF8D5"
+    icon: CleanCode
+analyticsBusiness:
+  - id: 0
+    title: 100%
+    value: Want Change
+    description: 100% of employees want to make positive life changes.
+  - id: 1
+    title: 84%
+    value: Saw Symptom Reduction
+    description:
+      84% experience reduced depressive symptoms following digital wellness
+      interventions.
+  - id: 2
+    title: 83%
+    value: Desire Digital Solutions
+    description: 83% say digital mental health solutions are convenient and useful.

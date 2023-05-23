@@ -36,7 +36,7 @@ interface Data {
 }
 
 interface QueryJson<T> {
-  allDataJson: {
+  allDataYaml: {
     nodes: T;
   };
 }
@@ -46,7 +46,7 @@ interface QueryData extends QueryJson<Data[]> {}
 export default function useData() {
   const data: QueryData = useStaticQuery(graphql`
     query {
-      allDataJson {
+      allDataYaml {
         nodes {
           featureItem {
             id
@@ -91,6 +91,6 @@ export default function useData() {
   `);
 
   return {
-    data: first(data.allDataJson.nodes),
+    data: first(data.allDataYaml.nodes),
   };
 }
