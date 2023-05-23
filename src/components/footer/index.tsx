@@ -5,6 +5,7 @@ import { If } from "react-if";
 import Logo from "../logo";
 import UnionFooter from "../../assets/images/union-bottom.png";
 import Hug from "../../assets/images/hug.png";
+import Lang from "../lang";
 
 interface FooterProps {
   withContactAdmin?: boolean;
@@ -48,6 +49,9 @@ export default function Footer({ withContactAdmin }: FooterProps) {
               </a>
               . All Rights Reserved.
             </span>
+            <div className="mt-5">
+              <Lang />
+            </div>
           </div>
           <SitemapFooterMain />
         </div>

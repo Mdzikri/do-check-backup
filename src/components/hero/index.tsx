@@ -1,11 +1,12 @@
 import React from "react";
+import { injectIntl, Link, FormattedMessage } from "gatsby-plugin-react-intl"
 
 import Hug from "../../assets/images/hug.png";
 import Yolo from "../../assets/images/yolo.png";
 
 import "./style.scss";
 
-export default function Hero() {
+export default injectIntl(function Hero({ intl }) {
   return (
     <>
       <div className="bg-[#d4ecfd] relative">
@@ -33,17 +34,17 @@ export default function Hero() {
           <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                Maukah kamu memulai self development, sekarang?
+                {intl.formatMessage({ id: "greeting" })}
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Karena kamu potensial!
+                {intl.formatMessage({ id: "potential" })}
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
                   href="#"
                   className="rounded-[100px] bg-[#2A9EF4] pt-5 pb-5 pl-16 pr-16 text-lg text-white shadow-sm hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2A9EF4]"
                 >
-                  Mulai Konsultasi
+                  {intl.formatMessage({ id: "readyConsultation" })}
                 </a>
               </div>
             </div>
@@ -57,3 +58,4 @@ export default function Hero() {
     </>
   );
 }
+)

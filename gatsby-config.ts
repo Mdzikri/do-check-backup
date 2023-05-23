@@ -1,4 +1,5 @@
 import type { GatsbyConfig } from "gatsby";
+import path from "path";
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -28,6 +29,18 @@ const config: GatsbyConfig = {
     "gatsby-transformer-sharp",
     "gatsby-transformer-yaml",
     "gatsby-transformer-json",
+    {
+      resolve: `gatsby-plugin-react-intl`,
+      options: {
+        path: path.join(__dirname, 'src/lang'),
+        languages: [`en`, `id`],
+        defaultLanguage: `id`,
+        redirect: true,
+        redirectDefaultLanguageToRoot: false,
+        ignoredPaths: [],
+        fallbackLanguage: `id`,
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
