@@ -30,9 +30,34 @@ const config: GatsbyConfig = {
     "gatsby-transformer-yaml",
     "gatsby-transformer-json",
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "297658768", // Google Analytics / GA
+        ],
+        // This object gets passed directly to the gtag config command.
+        // This config will be shared across all trackingIds.
+        gtagConfig: {
+          // Anonymizes the last digits of the user’s IP.
+          // To comply with policies and legal regulations.
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        // This object is used for configuration specific to this plugin.
+        pluginConfig: {
+          // As false it puts the tracking script in the body instead of the head.
+          head: true,
+          // Optional parameter to honor the Do Not Track feature.
+          respectDNT: false,
+        },
+      },
+    },
+
+    {
       resolve: `gatsby-plugin-react-intl`,
       options: {
-        path: path.join(__dirname, 'src/lang'),
+        path: path.join(__dirname, "src/lang"),
         languages: [`en`, `id`],
         defaultLanguage: `id`,
         redirect: true,

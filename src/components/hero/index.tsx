@@ -1,12 +1,16 @@
+import { injectIntl } from "gatsby-plugin-react-intl";
 import React from "react";
-import { injectIntl, Link, FormattedMessage } from "gatsby-plugin-react-intl"
 
 import Hug from "../../assets/images/hug.png";
 import Yolo from "../../assets/images/yolo.png";
 
 import "./style.scss";
+import { useAnalytics } from "../../hooks/useAnalytics";
 
 export default injectIntl(function Hero({ intl }) {
+
+  const { gtag } = useAnalytics()
+
   return (
     <>
       <div className="bg-[#d4ecfd] relative">
@@ -41,6 +45,7 @@ export default injectIntl(function Hero({ intl }) {
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
+                  onClick={() => gtag({ 'test': 'data' })}
                   href="#"
                   className="rounded-[100px] bg-[#2A9EF4] pt-5 pb-5 pl-16 pr-16 text-lg text-white shadow-sm hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2A9EF4]"
                 >
