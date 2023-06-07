@@ -39,10 +39,10 @@ export default function Footer({ withContactAdmin }: FooterProps) {
             <div className="mb-6">
               <Logo />
             </div>
-            <span className="text-sm text-white mb-3 md:w-[305px] sm:text-left">
+            <span className="text-sm text-white mb-3 md:w-[305px] 2xl:text-lg sm:text-left">
               Let's Find A Solution To Your Problem
             </span>
-            <span className="text-sm text-white sm:text-left ">
+            <span className="text-sm text-white sm:text-left 2xl:text-lg ">
               © 2023{" "}
               <a href="https://flowbite.com/" className="hover:underline">
                 Wool

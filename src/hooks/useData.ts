@@ -17,10 +17,10 @@ interface ICommonAlternativeStruct {
 }
 
 interface Data {
-  featureItem: ICommonStruct[][];
+  featureItem: ICommonStruct[];
   newsItem: ICommonStruct[][];
-  timelineItem: ICommonAlternativeStruct[][];
-  ourValues: ICommonAlternativeStruct[][];
+  timelineItem: ICommonAlternativeStruct[];
+  ourValues: ICommonAlternativeStruct[];
   featureSecondItem: {
     id: number;
     title: string;

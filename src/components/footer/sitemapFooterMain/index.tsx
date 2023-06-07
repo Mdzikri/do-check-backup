@@ -45,16 +45,16 @@ export default function SitemapFooterMain() {
       <div className="md:flex flex-col">
         {linkStatic.map(({ href, title }, idx) => (
           <a className="mt-3" key={idx} href={href}>
-            <span className="text-white un">{title}</span>
+            <span className="text-white un 2xl:text-lg">{title}</span>
           </a>
         ))}
       </div>
       <div className="md:flex flex-col max-w-[413px]">
-        <h3 className="text-white mb-3">Hubungi Wool</h3>
+        <h3 className="text-white mb-3 2xl:text-lg">Hubungi Wool</h3>
         {contactPerson.map(({ title, value }, idx) => (
           <div key={idx} className="text-white mb-3">
-            <h6 className="text-white text-[15px] mb-1">{title}</h6>
-            <p className="text-white opacity-75 text-[14px]">{value}</p>
+            <h6 className="text-white text-[15px] 2xl:text-[18px] mb-1">{title}</h6>
+            <p className="text-white opacity-75 text-[14px] 2xl:text-[16px]">{value}</p>
           </div>
         ))}
       </div>

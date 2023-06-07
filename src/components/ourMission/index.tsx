@@ -66,10 +66,10 @@ export default function OurMission() {
         alt="union-full"
       />
       <div className="flex flex-col items-center mb-32">
-        <h3 className="text-4xl font-bold color-[#3E3E3E] mb-12 mt-36">
+        <h3 className="text-4xl 2xl:text-5xl font-bold color-[#3E3E3E] mb-12 mt-36">
           Our Mission
         </h3>
-        <p className="text-center w-2/3 font-[#3E3E3E] text-base">
+        <p className="text-center w-2/3 font-[#3E3E3E] text-base 2xl:text-lg">
           Our core aim is to fight mental health stigma to build healthy and
           thriving communities. We want to leverage digital solutions to
           increase accessibility to quality emotional health support. We offer
@@ -79,7 +79,7 @@ export default function OurMission() {
       </div>
 
       <div className="flex flex-col items-center">
-        <h3 className="text-4xl font-bold color-[#3E3E3E] mb-12">Our Values</h3>
+        <h3 className="text-4xl font-bold color-[#3E3E3E] 2xl:text-5xl mb-12">Our Values</h3>
         <div className="grid grid-cols-3 gap-10 w-10/12">
           {ourValues?.map(({ description, src, title }, idx) => (
             <a key={idx} href="#" className="block max-w-sm p-6 bg-transparent">
@@ -91,8 +91,8 @@ export default function OurMission() {
                   alt={title}
                 />
               </div>
-              <h5 className="mb-2 text-xl font-bold tracking-tight">{title}</h5>
-              <p className="font-normal  dark:text-gray-400">{description}</p>
+              <h5 className="mb-2 text-xl 2xl:text-2xl font-bold tracking-tight">{title}</h5>
+              <p className="font-normal 2xl:text-lg dark:text-gray-400">{description}</p>
             </a>
           ))}
         </div>

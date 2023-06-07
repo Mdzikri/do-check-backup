@@ -15,7 +15,7 @@ export default function HeroSecondary() {
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                 Jadi Gini Ceritanya...
               </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
+              <p className="mt-6 text-lg 2xl:text-xl leading-8 text-gray-600">
                 Sebuah cerita agar lebih dekat dengan Wool
               </p>
             </div>

@@ -6,7 +6,7 @@ import Us from "../../assets/images/us.webp";
 export default function OurTeam() {
     return (
         <>
-            <h3 className="text-4xl text-center font-bold px-24">Our Team</h3>
+            <h3 className="text-4xl text-center font-bold px-24 2xl:text-5xl">Our Team</h3>
             <img
                 src={Us}
                 alt="us"
