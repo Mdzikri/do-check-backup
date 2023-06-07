@@ -20,8 +20,8 @@ export default function Personalize() {
     <div className="flex items-center lg:px-24 md:px-4 mt-24 mb-24">
       <img className="w-5/6" draggable={false} src={LadySad} alt="lady-sad" />
       <div className="wrapper">
-        <h3 className="font-bold text-3xl mb-8">Personalised Care for All</h3>
-        <p className="text-lg w-4/5">
+        <h3 className="font-bold text-3xl mb-8 2xl:text-4xl">Personalised Care for All</h3>
+        <p className="text-lg w-4/5 2xl:text-xl">
           Your comfort is our priority. With the support of the Wool team, we’ll
           do our best to ensure that your wellness journey is smooth, secure and
           centered around you.
@@ -30,7 +30,7 @@ export default function Personalize() {
           {itemStatic.map((item, idx) => (
             <div className="flex items-center" key={idx}>
               <img className="w-6 h-6" draggable={false} src={Checkup} alt="checkup" />
-              <span className="ml-2 text-sm">{item}</span>
+              <span className="ml-2 text-sm 2xl:text-lg">{item}</span>
             </div>
           ))}
         </div>

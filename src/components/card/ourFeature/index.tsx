@@ -27,10 +27,10 @@ export default function OurFeatureCard({
       >
         <img className="scale-75" alt={title} src={src} />
       </div>
-      <h5 className="mb-2 text-xl font-bold w-4/5 tracking-tight text-[#333333]">
+      <h5 className="mb-2 text-xl font-bold w-4/5 tracking-tight 2xl:text-2xl text-[#333333]">
         {title}
       </h5>
-      <p className="font-normal text-sm text-gray-700 dark:text-gray-400">
+      <p className="font-normal text-sm text-gray-700 2xl:text-lg dark:text-gray-400">
         {value}
       </p>
     </a>

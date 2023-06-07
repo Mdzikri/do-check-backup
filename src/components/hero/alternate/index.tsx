@@ -10,7 +10,7 @@ export default function HeroAlternate() {
       <div className="bg-[#d4ecfd] relative overflow-hidden">
         <div className="relative isolate px-6 pt-3 lg:px-8">
           <div
-            className="absolute inset-x-0 -top-30 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+            className="absolute inset-x-0 -top-30 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 2xl:-top-20"
             aria-hidden="true"
           ></div>
           <img
@@ -24,7 +24,7 @@ export default function HeroAlternate() {
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                 Your Employees Need to Improve Their Mental Health, Right Now!
               </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
+              <p className="mt-6 text-lg leading-8 text-gray-600 2xl:text-xl 2xl:mt-10">
                 Employees are the most valuable investment asset! It’s in the
                 smallest moments that mental health support can really make a
                 difference. We get that. Each feature and value of our platform

@@ -18,7 +18,7 @@ export default function OurFeature() {
   })), [data]);
 
   return (
-    <div className="lg:flex md:grid md:grid-cols-2 md:gap-5 py-24 h-full items-stretch px-14 m-auto">
+    <div className="lg:flex md:grid md:grid-cols-2 md:gap-5 py-24 h-full items-stretch px-14 2xl:px-36 m-auto">
       {featureSecondItem?.map(({ color, icon, title, value }, idx) => (
         <OurFeatureCard
           src={icon}
