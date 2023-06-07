@@ -55,7 +55,7 @@ export default function Navbar() {
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
             <div>
-              <img className="h-11 w-auto" src={Logo} alt="logo" />
+              <img className="h-11 2xl:h-16 w-auto" src={Logo} alt="logo" />
             </div>
           </Link>
         </div>
@@ -85,7 +85,7 @@ export default function Navbar() {
           {activeNavbar.map((item, idx) => (
             <Link key={idx} to={item.href}>
               <span
-                className={`text-sm font-semibold leading-6 ${item.isActive ? "text-[#2A9EF4]" : "text-gray-900"
+                className={`text-sm 2xl:text-lg font-semibold leading-6 ${item.isActive ? "text-[#2A9EF4]" : "text-gray-900"
                   } hover:text-[#2A9EF4]`}
               >
                 {item.title}
@@ -94,9 +94,6 @@ export default function Navbar() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          {/* <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a> */}
         </div>
       </nav>
 

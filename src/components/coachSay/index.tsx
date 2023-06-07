@@ -31,16 +31,16 @@ export default function CoachSay() {
               <div className="img-coach md:flex md:items-center md:justify-center">
                 <img
                   draggable="false"
-                  className="lg:w-fit md:w-2/4"
+                  className="lg:w-fit md:w-2/4 2xl:w-3/4"
                   src={Coach}
                   alt="coach"
                 />
               </div>
               <div className="wrapper">
-                <h4 className="text-[#3E3E3E] md:text-[24px] lg:text-[28px] mb-4">
+                <h4 className="text-[#3E3E3E] md:text-[24px] lg:text-[28px] 2xl:text-[35px] mb-4">
                   “Professional and high skill employee”
                 </h4>
-                <p className="text-[#3E3E3E] md:text-sm lg:text-[16px]">
+                <p className="text-[#3E3E3E] md:text-sm lg:text-[16px] 2xl:text-[18px]">
                   Don't over think it big data or let's circle back to that nor
                   hit the ground running can you slack it to me. Pull in ten
                   extra bodies to help roll the tortoise deploy to production
@@ -50,8 +50,8 @@ export default function CoachSay() {
                 <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
                 <div className="flex justify-between">
                   <div className="flex flex-col">
-                    <h5 className="font-bold">John Cenna</h5>
-                    <span className="text-sm opacity-75">
+                    <h5 className="font-bold 2xl:text-lg">John Cenna</h5>
+                    <span className="text-sm 2xl:text-lg opacity-75">
                       VP of finance at Changi Airport Group
                     </span>
                   </div>

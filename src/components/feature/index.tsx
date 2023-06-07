@@ -26,14 +26,14 @@ export default function Feature() {
           className="rotate-180 scale-105 w-screen"
         />
       </div>
-      <div className="flex relative items-center pt-10 justify-center">
+      <div className="flex relative items-center pt-10 2xl:pt-44 justify-center">
         <div className="w-100 z-50 w-2/4">
-          <h4 className="text-center font-bold md:text-[34px] lg:text-[38px] md:mb-10 leading-[55px]">
+          <h4 className="text-center font-bold md:text-[34px] lg:text-[38px] 2xl:text-[55px] md:mb-10 leading-[55px]">
             Sebelumnya, apakah kamu sedang merasa seperti ini?
           </h4>
         </div>
 
-        <div className="absolute top-0 bg-[#d4ecfd] w-screen md:h-[23vh] lg:h-[46.3vh]"></div>
+        <div className="absolute top-0 bg-[#d4ecfd] w-screen md:h-[23vh] 2xl:h-[50vh] lg:h-[46.3vh]"></div>
       </div>
       <div className="flex w-8/12 m-auto flex-col items-center justify-center">
         {featureItem?.map((item, idx) => (
@@ -47,10 +47,10 @@ export default function Feature() {
                   src={item.imgSrc}
                 />
                 <div className="description-wrapper w-2/6">
-                  <h4 className="font-[#1D1D1D] text-xl font-bold mb-2">
+                  <h4 className="font-[#1D1D1D] text-xl 2xl:text-2xl font-bold mb-2">
                     {item.title}
                   </h4>
-                  <p className="text-sm">{item.value}</p>
+                  <p className="text-sm 2xl:text-lg">{item.value}</p>
                 </div>
               </div>
             </Then>
@@ -69,7 +69,7 @@ export default function Feature() {
                   <h4 className="font-[#1D1D1D] text-xl font-bold mb-2">
                     {item.title}
                   </h4>
-                  <p className="text-sm">{item.value}</p>
+                  <p className="text-sm 2xl:text-lg">{item.value}</p>
                 </div>
               </div>
             </Else>

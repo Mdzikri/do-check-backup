@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import { first } from "lodash";
+import { useEffect } from "react";
 
 interface ICommonStruct {
   id: number;
@@ -16,10 +17,10 @@ interface ICommonAlternativeStruct {
 }
 
 interface Data {
-  featureItem: ICommonStruct[];
-  newsItem: ICommonStruct[];
-  timelineItem: ICommonAlternativeStruct[];
-  ourValues: ICommonAlternativeStruct[];
+  featureItem: ICommonStruct[][];
+  newsItem: ICommonStruct[][];
+  timelineItem: ICommonAlternativeStruct[][];
+  ourValues: ICommonAlternativeStruct[][];
   featureSecondItem: {
     id: number;
     title: string;
@@ -41,7 +42,7 @@ interface QueryJson<T> {
   };
 }
 
-interface QueryData extends QueryJson<Data[]> {}
+interface QueryData extends QueryJson<Data[]> { }
 
 export default function useData() {
   const data: QueryData = useStaticQuery(graphql`

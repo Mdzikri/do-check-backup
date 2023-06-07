@@ -17,7 +17,7 @@ export default injectIntl(function Hero({ intl }) {
         <div className="absolute hug bottom-0">
           <img
             draggable="false"
-            className="md:w-2/5 lg:w-8/12"
+            className="md:w-2/5 lg:w-8/12 2xl:w-10/12"
             alt="hug"
             src={Hug}
           />
@@ -25,7 +25,7 @@ export default injectIntl(function Hero({ intl }) {
         <div className="absolute yolo top-20 right-0 flex justify-end">
           <img
             draggable="false"
-            className="md:w-1/3 md:mr-10 lg:w-8/12 "
+            className="md:w-1/3 md:mr-10 2xl:w-10/12 lg:w-8/12 "
             alt="hug"
             src={Yolo}
           />
@@ -37,17 +37,17 @@ export default injectIntl(function Hero({ intl }) {
           ></div>
           <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div className="text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              <h1 className="text-4xl 2xl:text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl">
                 {intl.formatMessage({ id: "greeting" })}
               </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
+              <p className="mt-6 text-lg 2xl:text-2xl leading-8 text-gray-600">
                 {intl.formatMessage({ id: "potential" })}
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <a
                   onClick={() => gtag({ 'test': 'data' })}
                   href="#"
-                  className="rounded-[100px] bg-[#2A9EF4] pt-5 pb-5 pl-16 pr-16 text-lg text-white shadow-sm hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2A9EF4]"
+                  className="rounded-[100px] bg-[#2A9EF4] pt-5 pb-5 pl-16 pr-16 text-lg 2xl:text-xl text-white shadow-sm hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2A9EF4]"
                 >
                   {intl.formatMessage({ id: "readyConsultation" })}
                 </a>
