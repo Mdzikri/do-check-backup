@@ -3,21 +3,22 @@ import React from "react";
 import ToolkitImage from "../../assets/images/yolo.png";
 import ToolkitUnion from "../../assets/images/toolkit-union.png";
 
-export default function Toolkit() {
+interface IToolKitProps {
+  content: string;
+  reverse: boolean;
+}
+
+export default function Toolkit({ content, reverse }: IToolKitProps) {
   return (
-    <div className="flex items-center relative justify-around mt-32 mb-48 px-36 m-auto">
+    <div className="flex items-center relative justify-around mt-32 mb-[320px] px-36 m-auto">
       <img
         draggable={false}
         className="absolute lg:-top-28 md:w-11/12 lg:w-4/5 -z-40"
         alt="toolkit-union"
         src={ToolkitUnion}
       />
-      <div className="lg:w-2/5 md:6/12">
-        <p className="lg:text-2xl md:text-md">
-          70% of employees do not seek help due to stigma and access barriers.
-          Organisations gather up to $10K additional annual healthcare and
-          productivity costs for each employee suffering.
-        </p>
+      <div className="lg:w-2/5 md:6/12 order">
+        <p className="lg:text-2xl md:text-md">{content}</p>
         <div className="mt-10 flex items-center lg:justify-start gap-x-6">
           <a
             href="#"
@@ -30,7 +31,9 @@ export default function Toolkit() {
       <img
         draggable={false}
         src={ToolkitImage}
-        className="lg:w-2/5 md:w-11/12"
+        className={`lg:w-2/5 md:w-11/12 ${
+          reverse ? "md:order-last" : "md:order-first"
+        }`}
         alt="toolkit"
       />
     </div>

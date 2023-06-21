@@ -16,8 +16,15 @@ const IndexPage: React.FC<PageProps> = () => {
       <Navbar />
       <HeroAlternate />
       <OurFeature />
-      <Toolkit />
-      <Personalize />
+      <Toolkit
+        content="37% karyawan Indonesia mengalami gangguan kesehatan mental (stress) sehari harinya."
+        reverse={true}
+      />
+      <Toolkit
+        content="Dampak positif dari lingkungan kerja yang suportif, berkolerasi antara dukungan pada kesehatan mental di tempat kerja, level stress, serta kecemasan karyawan. Maka dari itu, penting bagi perusahaan untuk mendukung kesehatan mental para karyawannya (Gen Z & Milenial)"
+        reverse={false}
+      />
+      {/* <Personalize /> */}
       <WhyUs />
       <Productivity />
       <Footer withContactAdmin />

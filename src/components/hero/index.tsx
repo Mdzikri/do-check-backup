@@ -6,10 +6,10 @@ import Yolo from "../../assets/images/yolo.png";
 
 import "./style.scss";
 import { useAnalytics } from "../../hooks/useAnalytics";
+import Button from "../button/button";
 
 export default injectIntl(function Hero({ intl }) {
-
-  const { gtag } = useAnalytics()
+  const { gtag } = useAnalytics();
 
   return (
     <>
@@ -44,13 +44,9 @@ export default injectIntl(function Hero({ intl }) {
                 {intl.formatMessage({ id: "potential" })}
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
-                <a
-                  onClick={() => gtag({ 'test': 'data' })}
-                  href="#"
-                  className="rounded-[100px] bg-[#2A9EF4] pt-5 pb-5 pl-16 pr-16 text-lg 2xl:text-xl text-white shadow-sm hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2A9EF4]"
-                >
+                <Button onClick={() => gtag({ test: "data" })} pill={true}>
                   {intl.formatMessage({ id: "readyConsultation" })}
-                </a>
+                </Button>
               </div>
             </div>
           </div>
@@ -62,5 +58,4 @@ export default injectIntl(function Hero({ intl }) {
       </div>
     </>
   );
-}
-)
+});
