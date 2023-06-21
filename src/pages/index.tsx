@@ -3,13 +3,13 @@ import type { HeadFC, PageProps } from "gatsby";
 
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-import Hero from "../components/hero";
-import Provide from "../components/provide";
-import Us from "../components/us";
+import Hero from "../section/hero";
+import Provide from "../section/provide";
+import Us from "../section/us";
 
-import News from "../components/news";
-import CoachSay from "../components/coachSay";
-import Feature from "../components/feature";
+import News from "../section/news";
+import CoachSay from "../section/coachSay";
+import Feature from "../section/feature";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (

@@ -3,12 +3,12 @@ import * as React from "react";
 
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-import HeroAlternate from "../components/hero/alternate";
-import OurFeature from "../components/ourFeature";
-import Toolkit from "../components/toolkit";
-import Personalize from "../components/personalized";
-import WhyUs from "../components/whyUs";
-import Productivity from "../components/productivity";
+import HeroAlternate from "../section/hero/alternate";
+import OurFeature from "../section/ourFeature";
+import Toolkit from "../section/toolkit";
+import Personalize from "../section/personalized";
+import WhyUs from "../section/whyUs";
+import Productivity from "../section/productivity";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (

@@ -3,10 +3,10 @@ import * as React from "react";
 
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-import HeroSecondary from "../components/hero/secondary";
-import Timeline from "../components/timeline";
-import OurMission from "../components/ourMission";
-import OurTeam from "../components/ourTeam";
+import HeroSecondary from "../section/hero/secondary";
+import Timeline from "../section/timeline";
+import OurMission from "../section/ourMission";
+import OurTeam from "../section/ourTeam";
 
 const AboutUs: React.FC<PageProps> = () => {
   return (
