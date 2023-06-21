@@ -15,7 +15,8 @@ const IndexPage: React.FC<PageProps> = () => {
     <main>
       <Navbar />
       <HeroAlternate />
-      <OurFeature />
+      <section className="px-36"></section>
+      {/* <OurFeature />
       <Toolkit
         content="37% karyawan Indonesia mengalami gangguan kesehatan mental (stress) sehari harinya."
         reverse={true}
@@ -23,10 +24,10 @@ const IndexPage: React.FC<PageProps> = () => {
       <Toolkit
         content="Dampak positif dari lingkungan kerja yang suportif, berkolerasi antara dukungan pada kesehatan mental di tempat kerja, level stress, serta kecemasan karyawan. Maka dari itu, penting bagi perusahaan untuk mendukung kesehatan mental para karyawannya (Gen Z & Milenial)"
         reverse={false}
-      />
+      /> */}
       {/* <Personalize /> */}
-      <WhyUs />
-      <Productivity />
+      {/* <WhyUs /> */}
+      {/* <Productivity /> */}
       <Footer withContactAdmin />
     </main>
   );

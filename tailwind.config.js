@@ -6,7 +6,25 @@ module.exports = {
     "./node_modules/tw-elements/dist/js/**/*.js",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "wool-background": {
+          primary: "#F9FCFE",
+          secondary: "#EAF5FE",
+        },
+        "wool-blue": "#2A9EF4",
+        "wool-orange": "#FDB827",
+        "wool-red": "#F84F31",
+        "wool-green": "#6EC51E",
+        "wool-neutral": {
+          100: "#3E3E3E",
+          200: "#2F3940",
+          300: "#D5F5F6",
+          400: "#D6DFE3",
+          500: "#FFFFFF",
+        },
+      },
+    },
   },
   plugins: [require("tw-elements/dist/plugin")],
 };
