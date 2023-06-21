@@ -20,7 +20,7 @@ export default function HeroAlternate() {
           <div className="lg:flex px-10 md:px-36 items-center justify-between py-24 lg:py-32 z-40 lg:pt-32 lg:pb-20">
             {/* Wording Section */}
             <div className="text-start lg:w-[50%]">
-              <h1 className="font-bold text-gray-900 md:leading-[55px] sm:text-[40px]">
+              <h1 className="font-bold text-wool-blue md:leading-[55px] sm:text-[40px]">
                 Your Employees Need to Improve Their Mental Health, Right Now!
               </h1>
               <p className="mt-6 text-lg leading-[30px] text-[#454545] 2xl:text-[18px] 2xl:mt-10">
@@ -40,6 +40,7 @@ export default function HeroAlternate() {
                   {clientData.map((client) => {
                     return (
                       <img
+                        key={client.id}
                         className="w-[50px] grayscale transition ease-in-out delay-100 hover:grayscale-0"
                         src={client.image}
                         alt={client.name}

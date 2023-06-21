@@ -3,7 +3,11 @@ import { isEqual, size } from "lodash";
 import React, { useCallback, useEffect, useState } from "react";
 
 import Logo from "../../assets/images/logo-navbar.png";
-import { ActiveNavbarKeys, INavbarHandler } from "../../interface/global.interface";
+import {
+  ActiveNavbarKeys,
+  INavbarHandler,
+} from "../../interface/global.interface";
+import Button from "../button/button";
 
 export default function Navbar() {
   const [activeNavbar, setActiveNavbar] = useState([
@@ -27,24 +31,25 @@ export default function Navbar() {
     },
   ]);
 
-  const navbarHandler: INavbarHandler<ActiveNavbarKeys> = useCallback((key, other) => setActiveNavbar(
-    activeNavbar.map((item) => {
-      item.isActive = false;
-      if (isEqual(item[key], other)) item.isActive = true;
-      return item;
-    })
-  ), [isEqual, activeNavbar, setActiveNavbar])
+  const navbarHandler: INavbarHandler<ActiveNavbarKeys> = useCallback(
+    (key, other) =>
+      setActiveNavbar(
+        activeNavbar.map((item) => {
+          item.isActive = false;
+          if (isEqual(item[key], other)) item.isActive = true;
+          return item;
+        })
+      ),
+    [isEqual, activeNavbar, setActiveNavbar]
+  );
 
   useEffect(() => {
     const location = window.location.pathname;
     const path = location.substring(0, size(location) - 1);
 
-    if (location && path)
-      navbarHandler('href', path)
-    else
-      navbarHandler('id', 0)
+    if (location && path) navbarHandler("href", path);
+    else navbarHandler("id", 0);
   }, []);
-
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
@@ -69,31 +74,30 @@ export default function Navbar() {
               className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               aria-hidden="true"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
               />
             </svg>
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-12">
-          {activeNavbar.map((item, idx) => (
-            <Link key={idx} to={item.href}>
-              <span
-                className={`text-sm 2xl:text-lg font-semibold leading-6 ${item.isActive ? "text-[#2A9EF4]" : "text-gray-900"
-                  } hover:text-[#2A9EF4]`}
+        <div className="hidden lg:flex items-center lg:gap-x-12">
+          {activeNavbar.map((item) => {
+            return (
+              <Link
+                key={item.id}
+                to={item.href}
+                className={item.id === 2 ? "text-white bg-wool-blue px-6 py-3 rounded-[10px] drop-shadow-md hover:bg-transparent border hover:border-wool-blue hover:text-wool-blue" : "text-[#3e3e3e] hover:text-wool-blue"}
               >
                 {item.title}
-              </span>
-            </Link>
-          ))}
-        </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+              </Link>
+            );
+          })}
         </div>
       </nav>
 
