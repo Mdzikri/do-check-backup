@@ -4,7 +4,7 @@ import { factData } from "../../dummy/fact";
 
 const FactSection = () => {
   return (
-    <section id="section-fact" className="px-8 md:px-36 py-10">
+    <section id="section-fact" className="px-8 md:px-36 py-2">
       <Title>If you're wondering why this happened</Title>
       <div className="py-16">
         {factData.map((fact, i) => {

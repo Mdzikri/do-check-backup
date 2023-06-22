@@ -1,66 +1,49 @@
 import React from "react";
-import SitemapFooterMain from "./sitemapFooterMain";
-import { If } from "react-if";
+import WoolLogo from "../../assets/images/logo-blue.png";
+import { contactData } from "../../dummy/contact";
 
-import Logo from "../logo";
-import UnionFooter from "../../assets/images/union-bottom.png";
-import Hug from "../../assets/images/hug.png";
-import Lang from "../lang";
-
-interface FooterProps {
-  withContactAdmin?: boolean;
-}
-
-export default function Footer({ withContactAdmin }: FooterProps) {
+export default function Footer() {
   return (
     <>
-      <If condition={withContactAdmin}>
-        <div className="flex items-center justify-center z-53 px-24 flex-col mb-20">
-          <img
-            src={Hug}
-            className="lg:w-5/12 md:w-2/3 "
-            draggable={false}
-            alt="contact-admin"
-          />
-          <h3 className="font-bold lg:text-3xl md:text-xl lg:max-w-md mb-10">
-            Wool can help your business thrive. Let's work together.
-          </h3>
-          <a
-            href="#"
-            className="rounded-[100px] bg-[#2A9EF4] lg:pt-3 md:pt-2 lg:pb-3 md:pb-2 lg:pl-10 md:pl-5 lg:pr-10 md:pr-5 text-lg text-white shadow-sm hover:bg-sky-400 focus-visible:outline focus-visible:outline-2 lg:text-base md:text-sm focus-visible:outline-offset-2 focus-visible:outline-[#2A9EF4]"
-          >
-            Hubungi Admin
-          </a>
-        </div>
-      </If>
-      <footer className="bg-[#2A9EF4] relative">
-        <div className="w-full mx-auto max-w-screen-xl z-50 p-4 md:flex md:items-start md:justify-between">
-          <div className="md:flex flex-col mt-16">
-            <div className="mb-6">
-              <Logo />
+      <footer className="bg-[#d4ecfd] relative mt-20 px-10 md:px-32 py-10 md:py-20">
+        <div className="md:flex">
+          <div className="md:w-[33%]">
+            <div className="w-[200px]">
+              <img src={WoolLogo} alt="We open our lives" />
             </div>
-            <span className="text-sm text-white mb-3 md:w-[305px] 2xl:text-lg sm:text-left">
+            <span className="block my-5 text-[#3e3e3e] font-bold text-[18px]">
               Let's Find A Solution To Your Problem
             </span>
-            <span className="text-sm text-white sm:text-left 2xl:text-lg ">
-              © 2023{" "}
-              <a href="https://flowbite.com/" className="hover:underline">
-                Wool
-              </a>
-              . All Rights Reserved.
+            <span className="block my-5 text-[#3e3e3e] text-[14px]">
+              {contactData.address}
             </span>
-            <div className="mt-5">
-              <Lang />
-            </div>
           </div>
-          <SitemapFooterMain />
+          <div className="md:w-[33%] md:pl-20">
+            <span className="font-bold">Navigation</span>
+            <ul className="md:pt-10 text-[#3e3e3e]">
+              <li className="my-2">
+                <a href="">About Us</a>
+              </li>
+              <li className="my-2">
+                <a href="">Wool For Company</a>
+              </li>
+              <li className="my-2">
+                <a href="">Join as a Coach</a>
+              </li>
+            </ul>
+          </div>
+          <div className="md:w-[33%] md:pl-20">
+            <span className="font-bold">Business & Cooperation</span>
+            <ul className="md:pt-10 text-[#3e3e3e] font-bold">
+              <li className="my-2">
+                <a href="">{contactData.phone}</a>
+              </li>
+              <li className="my-2">
+                <a href="">{contactData.email}</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <img
-          draggable="false"
-          className="absolute  md:overflow-hidden md:bottom-96 lg:bottom-20 -z-10"
-          alt="union-footer"
-          src={UnionFooter}
-        />
       </footer>
     </>
   );

@@ -3,6 +3,8 @@ import Pertamina from "../assets/images/clients/pertamina.png";
 import Telkom from "../assets/images/clients/telkom.png";
 import PLN from "../assets/images/clients/pln.png";
 import Shell from "../assets/images/clients/shell.png";
+import Kuncie from "../assets/images/clients/kuncie.png";
+import BukuWarung from "../assets/images/clients/buku-warung.png";
 
 export const clientData: IClient[] = [
   {
@@ -24,5 +26,18 @@ export const clientData: IClient[] = [
     id: 3,
     name: "Shell",
     image: Shell,
+  },
+];
+
+export const corporateClientData: IClient[] = [
+  {
+    id: 0,
+    name: "Kuncie",
+    image: Kuncie,
+  },
+  {
+    id: 0,
+    name: "Buku Warung",
+    image: BukuWarung,
   },
 ];

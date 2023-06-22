@@ -7,7 +7,7 @@ const OurGoalSection = () => {
   return (
     <section
       id="section-goal"
-      className="px-8 md:px-36 py-10 relative h-[380px]"
+      className="px-8 md:px-36 py-2 relative h-[380px]"
     >
       <img
         src={Attonement}

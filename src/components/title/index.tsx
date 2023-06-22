@@ -8,8 +8,10 @@ interface TitleProps {
 const Title: React.FC<TitleProps> = ({ children }) => {
   return (
     <div className="section-header">
-      <h2 className="header-text">{children}</h2>
-      <div className="header-divider" />
+      <div className="inline-block">
+        <h2 className="header-text">{children}</h2>
+        <div className="header-divider" />
+      </div>
     </div>
   );
 };

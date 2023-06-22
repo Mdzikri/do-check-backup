@@ -8,6 +8,9 @@ import ProblemSection from "../section/problem";
 import FactSection from "../section/fact";
 import OurGoalSection from "../section/ourGoal";
 import WoolFeatureSection from "../section/woolFeature";
+import OurStepSection from "../section/ourStep";
+import MeetCoachSection from "../section/meetCoach";
+import CollabSection from "../section/collab/collab";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -18,7 +21,10 @@ const IndexPage: React.FC<PageProps> = () => {
       <FactSection />
       <OurGoalSection />
       <WoolFeatureSection />
-      <Footer withContactAdmin />
+      <OurStepSection />
+      <MeetCoachSection />
+      <CollabSection />
+      <Footer />
     </main>
   );
 };

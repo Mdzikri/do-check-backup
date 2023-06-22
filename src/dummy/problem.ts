@@ -8,7 +8,7 @@ export const problemData: IProblem[] = [
     id: 0,
     title: "Unproductive Employees",
     description:
-      "Riset dari Gallup, inc. melaporkan bahwa 76% karyawan di Indonesia tidak termotivasi dengan pekerjaan mereka",
+      "Research from Gallup, Inc. reported that 76% of employees in Indonesia are not motivated by their work",
     image: Concentrate,
   },
   {
