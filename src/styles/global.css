@@ -21,3 +21,7 @@ body,
 .avenir {
   font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
 }
+
+body {
+  background-color: #F9FCFE;
+}

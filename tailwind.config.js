@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./src/pages/**/*.{js,jsx,ts,tsx}",
     "./src/components/**/*.{js,jsx,ts,tsx}",
+    "./src/section/**/*.{js,jsx,ts,tsx}",
     "./node_modules/tw-elements/dist/js/**/*.js",
   ],
   theme: {
@@ -16,6 +17,7 @@ module.exports = {
         "wool-orange": "#FDB827",
         "wool-red": "#F84F31",
         "wool-green": "#6EC51E",
+        "wool-dark-purple": "#3B3348",
         "wool-neutral": {
           100: "#3E3E3E",
           200: "#2F3940",

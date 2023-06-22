@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import { isEqual, size } from "lodash";
 import React, { useCallback, useEffect, useState } from "react";
 
-import Logo from "../../assets/images/logo-navbar.png";
+import Logo from "../../assets/images/logo-blue.png";
 import {
   ActiveNavbarKeys,
   INavbarHandler,

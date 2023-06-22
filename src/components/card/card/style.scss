@@ -1,0 +1,25 @@
+.card {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  height: 250px;
+  padding: 1.5em;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.22px;
+  margin-bottom: 1em;
+}
+
+.card-content {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(62, 62, 62, 0.7);
+}
+
+.card-image {
+    width: 50px;
+    margin-bottom: 1.25em;
+}
