@@ -1,7 +1,7 @@
 import { IOurStep } from "../interface/ourStep.interface";
-import Initial from "../assets/images/steps/initial-illustration.png";
-import Treatment from "../assets/images/steps/treatment-illustration.png";
-import Outcome from "../assets/images/steps/outcome-illustration.png";
+import Initial from "../assets/images/steps/initial-assesment.svg";
+import Treatment from "../assets/images/steps/treatment.svg";
+import Outcome from "../assets/images/steps/outcome.svg";
 
 export const ourStepData: IOurStep[] = [
   {
