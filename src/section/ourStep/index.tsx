@@ -25,7 +25,7 @@ const OurStepSection: React.FC = () => {
             );
           })}
         </div>
-        <div className="order-first md:order-last">
+        <div className="transition ease-in-out delay-150 order-first md:order-last">
           <img
             src={ourStepData[activeTab].image}
             alt="Do Check Steps"
