@@ -20,7 +20,7 @@ export default function Navbar() {
     {
       id: 1,
       title: "About Us",
-      href: "/tentang-kami",
+      href: "/about-us",
       isActive: false,
     },
     {

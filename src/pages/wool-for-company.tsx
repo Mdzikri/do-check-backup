@@ -24,7 +24,10 @@ const IndexPage: React.FC<PageProps> = () => {
       <WoolFeatureSection />
       <OurStepSection />
       <MeetCoachSection />
-      <CollabSection />
+      <CollabSection
+        buttonText="Request FREE Demo"
+        text="Collaborate with Wool, allow people to contribute their best!"
+      />
       <FaqSection />
       <Footer />
     </main>
