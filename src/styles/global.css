@@ -4,17 +4,17 @@
 
 @font-face {
   font-family: "Avenir";
-  src: url("/font/Avenir/") format("eot"),
-    url("/font/Avenir/Avenir/Avenir-Regular.woff") format("woff"),
-    url("/font/Avenir/Avenir/Avenir-Regular.ttf") format("truetype");
+  src: url("../assets/font/Avenir/Avenir-Regular.eot") format("eot"),
+    url("../assets/font/Avenir/Avenir-Regular.woff") format("woff"),
+    url("../assets/font/Avenir/Avenir-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Avenir";
   font-weight: bold;
-  src: url("/font/Avenir/Avenir/Avenir-Bold.eot?#") format("eot"),
-    url("/font/Avenir/Avenir/Avenir-Bold.woff") format("woff"),
-    url("/font/Avenir/Avenir/Avenir-Bold.ttf") format("truetype");
+  src: url("../assets/font/Avenir/Avenir-Regular.eot") format("eot"),
+    url("../assets/font/Avenir/Avenir-Bold.woff") format("woff"),
+    url("../assets/font/Avenir/Avenir-Bold.ttf") format("truetype");
 }
 
 body,
@@ -23,5 +23,5 @@ body,
 }
 
 body {
-  background-color: #F9FCFE;
+  background-color: #f9fcfe;
 }

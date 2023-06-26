@@ -1,22 +1,20 @@
 import type { HeadFC, PageProps } from "gatsby";
 import * as React from "react";
-
-import Footer from "../components/footer";
-import Navbar from "../components/navbar";
 import CollabSection from "../section/collab/collab";
 import JourneySection from "../section/journey";
+import DefaultLayout from "../layouts/defaultLayout";
+import OurMissionSection from "../section/ourMission";
 
 const AboutUs: React.FC<PageProps> = () => {
   return (
-    <main>
-      <Navbar />
+    <DefaultLayout>
       <JourneySection />
+      <OurMissionSection />
       <CollabSection
         text="Wool can help your business thrive. Let's work together"
         buttonText="Call Admin"
       />
-      <Footer />
-    </main>
+    </DefaultLayout>
   );
 };
 

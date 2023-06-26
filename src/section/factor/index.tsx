@@ -22,10 +22,10 @@ const FactorSection = () => {
               className="flex flex-col md:flex-row justify-between items-center"
             >
               <div className="md:w-[50%]">
-                <h2 className="font-bold text-[22px] text-wool-dark-purple">
-                  {fact.author}
+                <h2 className="text-[20px] text-wool-dark-purple mb-2">
+                  {fact.quotes}
                 </h2>
-                <p className="text-wool-neutral-200/70">{fact.quotes}</p>
+                <p className="text-wool-neutral-200/70 text-[16px]">{fact.author}</p>
               </div>
               <div
                 className={`md:w-[50%] flex justify-center ${
@@ -43,7 +43,7 @@ const FactorSection = () => {
         })}
       </div>
       <img
-        className="absolute right-0 bottom-0 w-[200px]"
+        className="absolute right-0 bottom-0 w-[200px] hidden sm:block"
         src={BackgroundRight}
         alt="wool id"
         placeholder="blur"

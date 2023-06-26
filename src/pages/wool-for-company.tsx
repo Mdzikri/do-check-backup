@@ -12,11 +12,11 @@ import MeetCoachSection from "../section/meetCoach";
 import CollabSection from "../section/collab/collab";
 import FactorSection from "../section/factor";
 import FaqSection from "../section/faq";
+import DefaultLayout from "../layouts/defaultLayout";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <main>
-      <Navbar />
+    <DefaultLayout>
       <HeroAlternate />
       <ProblemSection />
       <FactorSection />
@@ -29,8 +29,7 @@ const IndexPage: React.FC<PageProps> = () => {
         text="Collaborate with Wool, allow people to contribute their best!"
       />
       <FaqSection />
-      <Footer />
-    </main>
+    </DefaultLayout>
   );
 };
 

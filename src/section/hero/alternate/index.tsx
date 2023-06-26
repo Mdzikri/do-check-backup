@@ -4,11 +4,11 @@ import Display from "../../../assets/images/mental-health.png";
 import MiscOne from "../../../assets/images/misc-1.png";
 import MiscTwo from "../../../assets/images/misc-2.png";
 import Button from "../../../components/button/button";
-import { clientData } from "../../../dummy/client";
+// import { clientData } from "../../../dummy/client";
 
 export default function HeroAlternate() {
   return (
-    <div className="bg-[#d4ecfd] relative overflow-hidden">
+    <div className="bg-[#d4ecfd] relative overflow-hidden -mt-[140px]">
       <div className="relative isolate pt-3">
         <img
           draggable={false}
@@ -33,10 +33,10 @@ export default function HeroAlternate() {
 
             {/* Client Sub Section */}
             <div className="md:flex items-center w-100 mt-10 md:mt-20">
-              <span className="block text-[#3e3e3e] font-bold text-[20px] mr-10 mb-5 md:mb-0">
+              {/* <span className="block text-[#3e3e3e] font-bold text-[20px] mr-10 mb-5 md:mb-0">
                 Our Clients
-              </span>
-              <div className="grid grid-cols-4 gap-10">
+              </span> */}
+              {/* <div className="grid grid-cols-4 gap-10">
                 {clientData.map((client) => {
                   return (
                     <img
@@ -48,7 +48,7 @@ export default function HeroAlternate() {
                     />
                   );
                 })}
-              </div>
+              </div> */}
             </div>
           </div>
 
