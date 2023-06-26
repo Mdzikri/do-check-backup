@@ -43,7 +43,7 @@ const FactorSection = () => {
         })}
       </div>
       <img
-        className="absolute right-0 bottom-0 w-[200px]"
+        className="absolute right-0 bottom-0 w-[200px] hidden sm:block"
         src={BackgroundRight}
         alt="wool id"
         placeholder="blur"

@@ -8,7 +8,7 @@ import { clientData } from "../../../dummy/client";
 
 export default function HeroAlternate() {
   return (
-    <div className="bg-[#d4ecfd] relative overflow-hidden">
+    <div className="bg-[#d4ecfd] relative overflow-hidden -mt-[140px]">
       <div className="relative isolate pt-3">
         <img
           draggable={false}
