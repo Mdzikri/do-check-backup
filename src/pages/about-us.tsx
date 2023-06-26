@@ -3,11 +3,13 @@ import * as React from "react";
 import CollabSection from "../section/collab/collab";
 import JourneySection from "../section/journey";
 import DefaultLayout from "../layouts/defaultLayout";
+import OurMissionSection from "../section/ourMission";
 
 const AboutUs: React.FC<PageProps> = () => {
   return (
     <DefaultLayout>
       <JourneySection />
+      <OurMissionSection />
       <CollabSection
         text="Wool can help your business thrive. Let's work together"
         buttonText="Call Admin"
