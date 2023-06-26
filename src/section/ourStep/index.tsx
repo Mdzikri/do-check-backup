@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Title from "../../components/title";
-import Expandable from "../../components/dropdown/expandable";
 import { ourStepData } from "../../dummy/ourStep";
+import Accordion from "../../components/accordion";
 
-const OurStepSection = () => {
+const OurStepSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<number>(0);
 
   return (
@@ -13,7 +13,7 @@ const OurStepSection = () => {
         <div>
           {ourStepData.map((step) => {
             return (
-              <Expandable
+              <Accordion
                 key={step.id}
                 number={step.id + 1}
                 onClick={() => setActiveTab(step.id)}
@@ -21,12 +21,16 @@ const OurStepSection = () => {
                 isOpen={activeTab === step.id}
               >
                 <p>{step.content}</p>
-              </Expandable>
+              </Accordion>
             );
           })}
         </div>
         <div className="order-first md:order-last">
-          <img src={ourStepData[activeTab].image} alt="Do Check Steps" />
+          <img
+            src={ourStepData[activeTab].image}
+            alt="Do Check Steps"
+            placeholder="blur"
+          />
         </div>
       </div>
     </section>

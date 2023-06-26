@@ -15,10 +15,10 @@ export default injectIntl(function Hero({ intl }) {
     <>
       <div className="bg-[#d4ecfd] relative">
         <div className="absolute hug bottom-0">
-          <img draggable="false" className="md:w-2/5 lg:w-8/12 2xl:w-10/12" alt="hug" src={Hug} />
+          <img placeholder="blur" draggable="false" className="md:w-2/5 lg:w-8/12 2xl:w-10/12" alt="hug" src={Hug} />
         </div>
         <div className="absolute yolo top-20 right-0 flex justify-end">
-          <img draggable="false" className="md:w-1/3 md:mr-10 2xl:w-10/12 lg:w-8/12 " alt="hug" src={Yolo} />
+          <img placeholder="blur" draggable="false" className="md:w-1/3 md:mr-10 2xl:w-10/12 lg:w-8/12 " alt="hug" src={Yolo} />
         </div>
         <div className="relative isolate px-6 pt-3 lg:px-8">
           <div className="absolute inset-x-0 -top-30 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true"></div>

@@ -16,6 +16,7 @@ export default function Toolkit({ content, reverse }: IToolKitProps) {
         className="absolute lg:-top-28 md:w-11/12 lg:w-4/5 -z-40"
         alt="toolkit-union"
         src={ToolkitUnion}
+        placeholder="blur"
       />
       <div className="lg:w-2/5 md:6/12 order">
         <p className="lg:text-2xl md:text-md">{content}</p>
@@ -35,6 +36,7 @@ export default function Toolkit({ content, reverse }: IToolKitProps) {
           reverse ? "md:order-last" : "md:order-first"
         }`}
         alt="toolkit"
+        placeholder="blur"
       />
     </div>
   );

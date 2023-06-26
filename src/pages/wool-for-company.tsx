@@ -5,12 +5,13 @@ import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import HeroAlternate from "../section/hero/alternate";
 import ProblemSection from "../section/problem";
-import FactSection from "../section/fact";
 import OurGoalSection from "../section/ourGoal";
 import WoolFeatureSection from "../section/woolFeature";
 import OurStepSection from "../section/ourStep";
 import MeetCoachSection from "../section/meetCoach";
 import CollabSection from "../section/collab/collab";
+import FactorSection from "../section/factor";
+import FaqSection from "../section/faq";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -18,12 +19,13 @@ const IndexPage: React.FC<PageProps> = () => {
       <Navbar />
       <HeroAlternate />
       <ProblemSection />
-      <FactSection />
+      <FactorSection />
       <OurGoalSection />
       <WoolFeatureSection />
       <OurStepSection />
       <MeetCoachSection />
       <CollabSection />
+      <FaqSection />
       <Footer />
     </main>
   );

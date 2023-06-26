@@ -9,7 +9,11 @@ const MeetCoachSection = () => {
       <Title>Let's Meet One of Our Coach</Title>
       <div className="flex flex-col md:flex-row justify-center items-center py-10">
         <div className="md:w-[50%]">
-          <img src={coachData.coach_photo} alt={coachData.coach_name} />
+          <img
+            src={coachData.coach_photo}
+            alt={coachData.coach_name}
+            placeholder="blur"
+          />
         </div>
         <div className="md:w-[50%] flex flex-col justify-center">
           <h2 className="text-wool-blue text-[24px] font-bold">
@@ -36,6 +40,7 @@ const MeetCoachSection = () => {
                     key={client.id}
                     src={client.image}
                     alt={client.name}
+                    placeholder="blur"
                   />
                 );
               })}
@@ -48,7 +53,7 @@ const MeetCoachSection = () => {
           “When people are fiinancially invested, they want a return. When
           people are emotionally invested, they want to contribute.”
         </q>
-        <span className="block text-[14px] text-wool-neutral-200/60 mt-4">
+        <span className="block text-[16px] text-wool-neutral-200/60 mt-4">
           Simon Sinek-
         </span>
       </div>

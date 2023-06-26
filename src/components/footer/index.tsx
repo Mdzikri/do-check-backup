@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import WoolLogo from "../../assets/images/logo-blue.png";
+import PhoneIcon from "../../assets/images/icons/phone-icon.png";
+import LetterIcon from "../../assets/images/icons/letter-icon.png";
 import { contactData } from "../../dummy/contact";
 
 export default function Footer() {
@@ -9,12 +11,12 @@ export default function Footer() {
         <div className="md:flex">
           <div className="md:w-[33%]">
             <div className="w-[200px]">
-              <img src={WoolLogo} alt="We open our lives" />
+              <img src={WoolLogo} alt="We open our lives" placeholder="blur" />
             </div>
             <span className="block my-5 text-[#3e3e3e] font-bold text-[18px]">
               Let's Find A Solution To Your Problem
             </span>
-            <span className="block my-5 text-[#3e3e3e] text-[14px]">
+            <span className="block my-5 text-[#3e3e3e] text-[16px]">
               {contactData.address}
             </span>
           </div>
@@ -36,10 +38,30 @@ export default function Footer() {
             <span className="font-bold">Business & Cooperation</span>
             <ul className="md:pt-10 text-[#3e3e3e] font-bold">
               <li className="my-2">
-                <a href="">{contactData.phone}</a>
+                <a
+                  target="_blank"
+                  href={`https://wa.me/${process.env.WA_PHONE_NUMBER}`}
+                  className="flex items-center"
+                >
+                  <img
+                    className="w-[20px] mr-2"
+                    src={PhoneIcon}
+                    alt="Phone Icon"
+                    placeholder="blur"
+                  />{" "}
+                  {contactData.phone}
+                </a>
               </li>
               <li className="my-2">
-                <a href="">{contactData.email}</a>
+                <a target="_blank" href="#" className="flex items-center">
+                  <img
+                    className="w-[20px] mr-2"
+                    src={LetterIcon}
+                    alt="Letter Icon"
+                    placeholder="blur"
+                  />
+                  {contactData.email}
+                </a>
               </li>
             </ul>
           </div>

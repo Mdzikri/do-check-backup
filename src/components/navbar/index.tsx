@@ -13,13 +13,13 @@ export default function Navbar() {
   const [activeNavbar, setActiveNavbar] = useState([
     {
       id: 0,
-      title: "Beranda",
+      title: "Home Page",
       href: "/",
       isActive: true,
     },
     {
       id: 1,
-      title: "Tentang Kami",
+      title: "About Us",
       href: "/tentang-kami",
       isActive: false,
     },
@@ -60,7 +60,12 @@ export default function Navbar() {
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
             <div>
-              <img className="h-11 2xl:h-16 w-auto" src={Logo} alt="logo" />
+              <img
+                className="h-11 2xl:h-16 w-auto"
+                src={Logo}
+                alt="logo"
+                placeholder="blur"
+              />
             </div>
           </Link>
         </div>
@@ -92,7 +97,11 @@ export default function Navbar() {
               <Link
                 key={item.id}
                 to={item.href}
-                className={item.id === 2 ? "text-white bg-wool-blue px-6 py-3 rounded-[10px] drop-shadow-md hover:bg-transparent border hover:border-wool-blue hover:text-wool-blue" : "text-[#3e3e3e] hover:text-wool-blue"}
+                className={
+                  item.id === 2
+                    ? "text-white bg-wool-blue px-6 py-3 rounded-[10px] drop-shadow-md hover:bg-transparent border hover:border-wool-blue hover:text-wool-blue"
+                    : "text-[#3e3e3e] hover:text-wool-blue"
+                }
               >
                 {item.title}
               </Link>

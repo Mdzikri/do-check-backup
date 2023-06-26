@@ -1,5 +1,7 @@
 import React from "react";
 import Button from "../../components/button/button";
+import ArrowRightIcon from "../../assets/images/icons/arrow-right-icon.png";
+import { navigate } from "gatsby";
 
 const CollabSection = () => {
   return (
@@ -8,7 +10,13 @@ const CollabSection = () => {
         <h2 className="text-[22px] text-black font-bold">
           Collaborate with Wool, allow people to contribute their best!
         </h2>
-        <Button className="mt-10">Request FREE Demo</Button>
+        <Button
+          icon={ArrowRightIcon}
+          className="mt-10"
+          onClick={() => navigate("/")}
+        >
+          Request FREE Demo
+        </Button>
       </div>
     </section>
   );

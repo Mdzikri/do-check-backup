@@ -25,7 +25,7 @@ export default function OurFeatureCard({
         style={{ background: color }}
         className={`rounded-full w-[50px] mb-4 h-[50px] flex items-center justify-center`}
       >
-        <img className="scale-75" alt={title} src={src} />
+        <img className="scale-75" alt={title} src={src} placeholder="blur" />
       </div>
       <h5 className="mb-2 text-xl font-bold w-4/5 tracking-tight 2xl:text-2xl text-[#333333]">
         {title}

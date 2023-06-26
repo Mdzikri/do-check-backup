@@ -36,7 +36,7 @@ export const corporateClientData: IClient[] = [
     image: Kuncie,
   },
   {
-    id: 0,
+    id: 1,
     name: "Buku Warung",
     image: BukuWarung,
   },

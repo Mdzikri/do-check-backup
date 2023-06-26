@@ -1,6 +1,10 @@
 import type { GatsbyConfig } from "gatsby";
 import path from "path";
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `landing-page-wool`,

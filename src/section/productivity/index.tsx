@@ -11,7 +11,13 @@ export default function Productivity() {
         Offering wellness support to employees positively influences their
         productivity and boosts worker morale.
       </span>
-      <img src={ProductivityImage} className="lg:w-10/12 md:w-full md:scale-125 mt-10 2xl:mt-24" alt="productivity" draggable={false} />
+      <img
+        src={ProductivityImage}
+        className="lg:w-10/12 md:w-full md:scale-125 mt-10 2xl:mt-24"
+        alt="productivity"
+        draggable={false}
+        placeholder="blur"
+      />
     </div>
   );
 }

@@ -49,6 +49,7 @@ export default function News() {
               className="rounded-xl w-full"
               src={imgSrc}
               alt={title}
+              placeholder="blur"
             />
           </div>
         </div>
@@ -69,6 +70,7 @@ export default function News() {
                 className="absolute top-0"
                 src={CutterUpper}
                 alt="cutter-bottom"
+                placeholder="blur"
               />
               <div
                 key={idx}
@@ -85,6 +87,7 @@ export default function News() {
                       className="rounded-xl w-full"
                       src={imgSrc}
                       alt={title}
+                      placeholder="blur"
                     />
                   </div>
                 </div>
@@ -94,6 +97,7 @@ export default function News() {
                 className="absolute md:-bottom-[10rem] lg:-bottom-[26rem] 2xl:-bottom-[35rem]"
                 src={CutterBottom}
                 alt="cutter-bottom"
+                placeholder="blur"
               />
             </div>
           </Then>

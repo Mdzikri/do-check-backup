@@ -11,7 +11,7 @@ const Card: React.FC<CardProps> = ({ image, title, content }) => {
   return (
     <div className="card shadow-md">
       <div className="card-image">
-        <img src={image} alt={title} />
+        <img src={image} alt={title} placeholder="blur" />
       </div>
       <h4 className="card-title">{title}</h4>
       <div className="card-content">{content}</div>

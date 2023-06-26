@@ -24,6 +24,7 @@ export default function Feature() {
           alt="union"
           src={Union}
           className="rotate-180 scale-105 w-screen"
+          placeholder="blur"
         />
       </div>
       <div className="flex relative items-center pt-10 2xl:pt-44 justify-center">
@@ -45,6 +46,7 @@ export default function Feature() {
                   className="md:w-2/4 lg:scale-75"
                   alt={item.title}
                   src={item.imgSrc}
+                  placeholder="blur"
                 />
                 <div className="description-wrapper w-2/6">
                   <h4 className="font-[#1D1D1D] text-xl 2xl:text-2xl font-bold mb-2">
@@ -64,6 +66,7 @@ export default function Feature() {
                   className="md:w-2/4 lg:scale-75"
                   alt={item.title}
                   src={item.imgSrc}
+                  placeholder="blur"
                 />
                 <div className="description-wrapper text-right w-2/6">
                   <h4 className="font-[#1D1D1D] text-xl font-bold mb-2">

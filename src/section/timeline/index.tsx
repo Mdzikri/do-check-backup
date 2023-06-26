@@ -5,16 +5,19 @@ import DoCheck from "../../assets/images/docheck-logo.png";
 import JobHiring from "../../assets/images/job-hiring.png";
 import useData from "../../hooks/useData";
 
-const staticImage = [DoCheck, DoCheck, DoCheck]
+const staticImage = [DoCheck, DoCheck, DoCheck];
 
 export default function Timeline() {
-  const { data } = useData()
+  const { data } = useData();
 
-  const timelineItem = useMemo(() => data?.timelineItem?.map((item, idx) => ({
-    ...item,
-    src: staticImage[idx]
-  })), [data])
-
+  const timelineItem = useMemo(
+    () =>
+      data?.timelineItem?.map((item, idx) => ({
+        ...item,
+        src: staticImage[idx],
+      })),
+    [data]
+  );
 
   return (
     <div className="px-24 ma-auto block mt-10 mb-10">
@@ -67,9 +70,12 @@ export default function Timeline() {
                                 src={src}
                                 alt="docheck-logo"
                                 className="rounded-full"
+                                placeholder="blur"
                               />
                             </div>
-                            <p className="mb-3 text-2xl 2xl:text-3xl font-bold">{title}</p>
+                            <p className="mb-3 text-2xl 2xl:text-3xl font-bold">
+                              {title}
+                            </p>
 
                             <p className="text-sm 2xl:text-lg md:text-base leading-snug text-gray-50 text-opacity-100">
                               {description}
@@ -87,9 +93,12 @@ export default function Timeline() {
                                 src={src}
                                 alt="docheck-logo"
                                 className="rounded-full"
+                                placeholder="blur"
                               />
                             </div>
-                            <p className="mb-3 text-2xl 2xl:text-3xl font-bold">{title}</p>
+                            <p className="mb-3 text-2xl 2xl:text-3xl font-bold">
+                              {title}
+                            </p>
                             <p className="text-sm 2xl:text-lg md:text-base leading-snug text-gray-50 text-opacity-100">
                               {description}
                             </p>
@@ -100,7 +109,7 @@ export default function Timeline() {
                   ))}
                 </div>
                 <div className="mx-auto flex justify-center relative -mt-20 md:-mt-20 z-50">
-                  <img draggable={false} src={JobHiring} />
+                  <img draggable={false} src={JobHiring} placeholder="blur" />
                 </div>
               </div>
             </div>

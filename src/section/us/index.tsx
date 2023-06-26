@@ -14,7 +14,13 @@ export default function Us() {
       </div>
 
       <div className="flex md:w-5/6 lg:w-2/4 2xl:w-4/12 m-auto p-5">
-        <img draggable="false" className="md:w-80" alt="us" src={UsImage} />
+        <img
+          placeholder="blur"
+          draggable="false"
+          className="md:w-80"
+          alt="us"
+          src={UsImage}
+        />
         <div className="description-wrapper relative">
           <div className="absolute md:w-[400px] md:-left-[70px] 2xl:-left-[40px]">
             <h4 className="md:leading-[50px] mb-5 md:text-[37px] 2xl:text-[40px] lg:text-[42px]">

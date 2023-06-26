@@ -64,6 +64,7 @@ export default function OurMission() {
         className="absolute top-0 -z-50 left-0"
         src={UnionFull}
         alt="union-full"
+        placeholder="blur"
       />
       <div className="flex flex-col items-center mb-32">
         <h3 className="text-4xl 2xl:text-5xl font-bold color-[#3E3E3E] mb-12 mt-36">
@@ -89,6 +90,7 @@ export default function OurMission() {
                   draggable={false}
                   src={src}
                   alt={title}
+                  placeholder="blur"
                 />
               </div>
               <h5 className="mb-2 text-xl 2xl:text-2xl font-bold tracking-tight">{title}</h5>
