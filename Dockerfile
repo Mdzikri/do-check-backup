@@ -5,8 +5,8 @@ COPY . .
 
 RUN apk add --update python3 make g++\
     && rm -rf /var/cache/apk/*
-RUN yarn
-RUN yarn build
+RUN npm install --legacy-peer-deps
+RUN npm run build
 
 FROM nginx:1.18-alpine AS deploy
 
