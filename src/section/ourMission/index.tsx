@@ -6,7 +6,7 @@ const OurMissionSection: React.FC = () => {
   return (
     <section id="section-mission" className="p-10 md:px-36">
       <Title>Our Mission</Title>
-      <div className="flex items-center justify-between py-10">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between py-10">
         <div className="md:w-[60%]">
           Our core aim is to fight mental health stigma to build healthy and
           thriving communities. We want to leverage digital solutions to

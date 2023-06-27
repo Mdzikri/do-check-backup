@@ -8,25 +8,20 @@ import {
   INavbarHandler,
 } from "../../interface/global.interface";
 import Button from "../button/button";
+import Lang from "../lang";
 
 export default function Navbar() {
   const [activeNavbar, setActiveNavbar] = useState([
     {
       id: 0,
       title: "Home Page",
-      href: "/",
+      href: "/en/",
       isActive: true,
     },
     {
       id: 1,
       title: "About Us",
-      href: "/about-us",
-      isActive: false,
-    },
-    {
-      id: 2,
-      title: "Wool for Company",
-      href: "/wool-for-company",
+      href: "/en/about-us",
       isActive: false,
     },
   ]);
@@ -97,16 +92,15 @@ export default function Navbar() {
               <Link
                 key={item.id}
                 to={item.href}
-                className={
-                  item.id === 2
-                    ? "text-white bg-wool-blue px-6 py-3 rounded-[10px] drop-shadow-md hover:bg-transparent border hover:border-wool-blue hover:text-wool-blue"
-                    : "text-[#3e3e3e] hover:text-wool-blue"
-                }
+                activeClassName="text-wool-blue font-semibold"
+                className="text-[#3e3e3e] hover:text-wool-blue"
               >
                 {item.title}
               </Link>
             );
           })}
+          <Button>Login</Button>
+          <Lang />
         </div>
       </nav>
 

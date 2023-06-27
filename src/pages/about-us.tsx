@@ -5,6 +5,7 @@ import JourneySection from "../section/journey";
 import DefaultLayout from "../layouts/defaultLayout";
 import OurMissionSection from "../section/ourMission";
 import OurValueSection from "../section/ourValue";
+import OurTeamSection from "../section/ourTeam";
 
 const AboutUs: React.FC<PageProps> = () => {
   return (
@@ -12,6 +13,7 @@ const AboutUs: React.FC<PageProps> = () => {
       <JourneySection />
       <OurMissionSection />
       <OurValueSection />
+      <OurTeamSection />
       <CollabSection
         text="Wool can help your business thrive. Let's work together"
         buttonText="Call Admin"
