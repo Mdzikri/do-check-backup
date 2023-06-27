@@ -25,6 +25,9 @@ const IndexPage: React.FC<PageProps> = () => {
       <CollabSection
         buttonText="Request FREE Demo"
         text="Collaborate with Wool, allow people to contribute their best!"
+        action={() =>
+          (window.location.href = `https://wa.me/${process.env.WA_PHONE_NUMBER}`)
+        }
       />
       <FaqSection />
     </DefaultLayout>

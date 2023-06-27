@@ -11,42 +11,19 @@ import Button from "../button/button";
 import Lang from "../lang";
 
 export default function Navbar() {
-  const [activeNavbar, setActiveNavbar] = useState([
+  const [lang, setLang] = useState<string>("en");
+  const navbarItem = [
     {
       id: 0,
       title: "Home Page",
-      href: "/en/",
-      isActive: true,
+      href: `/${lang}/`,
     },
     {
       id: 1,
       title: "About Us",
-      href: "/en/about-us",
-      isActive: false,
+      href: `/${lang}/about-us`,
     },
-  ]);
-
-  console.log('Test Automation')
-
-  const navbarHandler: INavbarHandler<ActiveNavbarKeys> = useCallback(
-    (key, other) =>
-      setActiveNavbar(
-        activeNavbar.map((item) => {
-          item.isActive = false;
-          if (isEqual(item[key], other)) item.isActive = true;
-          return item;
-        })
-      ),
-    [isEqual, activeNavbar, setActiveNavbar]
-  );
-
-  useEffect(() => {
-    const location = window.location.pathname;
-    const path = location.substring(0, size(location) - 1);
-
-    if (location && path) navbarHandler("href", path);
-    else navbarHandler("id", 0);
-  }, []);
+  ];
 
   return (
     <header className="absolute inset-x-0 top-0 z-50">
@@ -69,6 +46,7 @@ export default function Navbar() {
         <div className="flex lg:hidden">
           <button
             type="button"
+            onClick={() => alert('mobile menu')}
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
           >
             <span className="sr-only">Open main menu</span>
@@ -89,7 +67,7 @@ export default function Navbar() {
           </button>
         </div>
         <div className="hidden lg:flex items-center lg:gap-x-12">
-          {activeNavbar.map((item) => {
+          {navbarItem.map((item) => {
             return (
               <Link
                 key={item.id}

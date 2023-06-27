@@ -6,6 +6,7 @@ import DefaultLayout from "../layouts/defaultLayout";
 import OurMissionSection from "../section/ourMission";
 import OurValueSection from "../section/ourValue";
 import OurTeamSection from "../section/ourTeam";
+import { navigate } from "gatsby";
 
 const AboutUs: React.FC<PageProps> = () => {
   return (
@@ -17,6 +18,9 @@ const AboutUs: React.FC<PageProps> = () => {
       <CollabSection
         text="Wool can help your business thrive. Let's work together"
         buttonText="Call Admin"
+        action={() =>
+          (window.location.href = `https://wa.me/${process.env.WA_PHONE_NUMBER}`)
+        }
       />
     </DefaultLayout>
   );

@@ -2,10 +2,9 @@ import React, { useCallback } from "react";
 import { changeLocale } from "gatsby-plugin-react-intl";
 
 export default function Lang() {
-    
   const changeLangHandler = useCallback(
     (lang: "en" | "id") => {
-      console.log("lang", lang);
+      alert("This Feature were currently under development");
       changeLocale(lang);
     },
     [changeLocale]
@@ -13,18 +12,18 @@ export default function Lang() {
 
   return (
     <div className="lang flex items-center">
-      <button
+      <span
+        className="cursor-pointer pr-2 border-r border-[#7a7a7a]"
         onClick={() => changeLangHandler("id")}
-        className="bg-blue-600 mr-2 hover:bg-blue-600 text-white font-semibold 2xl:py-4 2xl:px-6 py-2 px-4 text-xs rounded shadow"
       >
         ID
-      </button>
-      <button
+      </span>
+      <span
+        className="font-bold text-wool-blue cursor-pointer pl-2 border-l border-[#7a7a7a]"
         onClick={() => changeLangHandler("en")}
-        className="bg-blue-300 hover:bg-blue-600 text-white font-semibold 2xl:py-4 2xl:px-6 py-2 px-4 text-xs rounded shadow"
       >
         EN
-      </button>
+      </span>
     </div>
   );
 }

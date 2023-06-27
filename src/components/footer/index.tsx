@@ -3,6 +3,7 @@ import WoolLogo from "../../assets/images/logo-blue.png";
 import PhoneIcon from "../../assets/images/icons/phone-icon.png";
 import LetterIcon from "../../assets/images/icons/letter-icon.png";
 import { contactData } from "../../dummy/contact";
+import { Link } from "gatsby";
 
 export default function Footer() {
   return (
@@ -23,13 +24,13 @@ export default function Footer() {
           <span className="font-bold">Navigation</span>
           <ul className="md:pt-10 text-[#3e3e3e]">
             <li className="my-2">
-              <a href="">About Us</a>
+              <Link target="_blank" to="/en/about-us">About Us</Link>
             </li>
             <li className="my-2">
-              <a href="">Wool For Company</a>
+              <a href="#">Wool For Company</a>
             </li>
             <li className="my-2">
-              <a href="">Join as a Coach</a>
+              <a target="_blank" href={`https://wa.me/${process.env.WA_PHONE_NUMBER}`}>Join as a Coach</a>
             </li>
           </ul>
         </div>

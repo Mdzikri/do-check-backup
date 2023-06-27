@@ -5,6 +5,8 @@ import MiscOne from "../../../assets/images/misc-1.png";
 import MiscTwo from "../../../assets/images/misc-2.png";
 import Button from "../../../components/button/button";
 // import { clientData } from "../../../dummy/client";
+import { navigate } from "gatsby"; 
+import scrollTo from 'gatsby-plugin-smoothscroll'
 
 export default function HeroAlternate() {
   return (
@@ -29,7 +31,7 @@ export default function HeroAlternate() {
               difference. We get that. Each feature and value of our platform is
               curated with your comfort in mind.
             </p>
-            <Button className="mt-10 relative">Get Started</Button>
+            <Button onClick={() => scrollTo('#section-problem')} className="mt-10 relative">Get Started</Button>
 
             {/* Client Sub Section */}
             <div className="md:flex items-center w-100 mt-10 md:mt-20">

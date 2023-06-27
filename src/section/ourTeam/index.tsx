@@ -10,15 +10,14 @@ const OurTeamSection = () => {
       <div className="flex flex-wrap w-full items-center justify-center py-10">
         {teamData.map((team, i) => {
           return (
-            <>
+            <React.Fragment key={team.id}>
               <CardTeam
-                key={team.id}
                 image={team.photo}
                 name={team.name}
                 position={team.position}
               />
               {i === 3 && <div className="basis-full" />}
-            </>
+            </React.Fragment>
           );
         })}
       </div>

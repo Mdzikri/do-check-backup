@@ -20,7 +20,7 @@ const Button: React.FC<IButtonProps> = ({
       className={`${pill ? "rounded-[100px]" : "rounded-[10px]"} ${
         className ? className : " "
       } bg-wool-blue py-2 px-6 md:py-4 md:px-12 text-sm md:text-md text-white shadow-sm hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wool-blue flex justify-between items-center`}
-      onClick={() => onClick}
+      onClick={onClick}
     >
       {children}
       {icon && (
