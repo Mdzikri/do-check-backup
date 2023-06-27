@@ -1,27 +1,26 @@
 import { Link } from "gatsby";
-import { isEqual, size } from "lodash";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import Logo from "../../assets/images/logo-blue.png";
-import {
-  ActiveNavbarKeys,
-  INavbarHandler,
-} from "../../interface/global.interface";
+import CloseIcon from "../../assets/images/icons/close-icon.svg";
 import Button from "../button/button";
 import Lang from "../lang";
 
 export default function Navbar() {
   const [lang, setLang] = useState<string>("en");
+  const [openMobile, setOpenMobile] = useState<boolean>(false);
   const navbarItem = [
     {
       id: 0,
       title: "Home Page",
       href: `/${lang}/`,
+      isActive: false,
     },
     {
       id: 1,
       title: "About Us",
       href: `/${lang}/about-us`,
+      isActive: false,
     },
   ];
 
@@ -46,7 +45,7 @@ export default function Navbar() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            onClick={() => alert('mobile menu')}
+            onClick={() => setOpenMobile(true)}
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
           >
             <span className="sr-only">Open main menu</span>
@@ -84,41 +83,49 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* <div className="lg:hidden" role="dialog" aria-modal="true">
+      <div
+        className={`lg:hidden ${openMobile ? "block" : "hidden"}`}
+        role="dialog"
+        aria-modal="true"
+      >
         <div className="fixed inset-0 z-50"></div>
         <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="/" className="-m-1.5 p-1.5">
-              <img className="h-10 w-auto" src={Logo} alt="logo" />
-            </a>
+            <Link to="/" className="-m-1.5 p-1.5">
+              <div>
+                <img
+                  className="h-11 2xl:h-16 w-auto"
+                  src={Logo}
+                  alt="logo"
+                  placeholder="blur"
+                />
+              </div>
+            </Link>
+            <div>
+              <img
+                src={CloseIcon}
+                alt="close"
+                onClick={() => setOpenMobile(false)}
+              />
+            </div>
           </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                {activeNavbar.map((item, idx) => (
-                  <a
-                    key={idx}
-                    href={item.href}
-                    className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 ${
-                      item.isActive ? "text-[#2A9EF4]" : "text-gray-900"
-                    } hover:bg-gray-50 hover:text-[#2A9EF4]`}
-                  >
-                    {item.title}
-                  </a>
-                ))}
-              </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+          <div className="flex flex-col items-center justify-center">
+            {navbarItem.map((item, idx) => (
+              <div key={idx} className="py-5 border-b-2 border-wool-background-secondary w-full text-center">
+                <Link
+                  to={item.href}
+                  className="text-[#3e3e3e] hover:text-wool-blue font-bold"
                 >
-                  Close Menu <span aria-hidden="true">&rarr;</span>
-                </a>
+                  {item.title}
+                </Link>
               </div>
+            ))}
+            <div className="py-5">
+              <Button onClick={() => setOpenMobile(false)}>Log In</Button>
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </header>
   );
 }
