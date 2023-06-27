@@ -26,6 +26,8 @@ export default function Navbar() {
     },
   ]);
 
+  console.log('Halo')
+
   const navbarHandler: INavbarHandler<ActiveNavbarKeys> = useCallback(
     (key, other) =>
       setActiveNavbar(
