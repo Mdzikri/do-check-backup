@@ -63,11 +63,11 @@ const config: GatsbyConfig = {
       options: {
         path: path.join(__dirname, "src/lang"),
         languages: [`en`, `id`],
-        defaultLanguage: `id`,
+        defaultLanguage: `en`,
         redirect: true,
         redirectDefaultLanguageToRoot: false,
         ignoredPaths: [],
-        fallbackLanguage: `id`,
+        fallbackLanguage: `en`,
       },
     },
     {

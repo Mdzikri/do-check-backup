@@ -1,0 +1,22 @@
+.team-card {
+  width: 280px;
+  height: 280px;
+  margin: 1.75em 1em;
+  position: relative;
+  border-radius: 25px;
+  box-shadow: 1px 2px 2px 1px rgb(180, 180, 180, 0.75);
+}
+
+.team-card-tag {
+  position: absolute;
+  width: 200px;
+  padding: 0.75em 0.25em;
+  border-radius: 20px;
+  bottom: -1;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fafafa;
+  text-align: center;
+  box-shadow: 1px 2px 2px 1px rgb(180, 180, 180, 0.75);
+}
