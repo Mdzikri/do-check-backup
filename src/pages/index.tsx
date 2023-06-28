@@ -11,6 +11,7 @@ import OurStepSection from "../section/ourStep";
 import MeetCoachSection from "../section/meetCoach";
 import CollabSection from "../section/collab/collab";
 import FaqSection from "../section/faq";
+import PlanSection from "../section/plan";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -22,6 +23,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <WoolFeatureSection />
       <OurStepSection />
       <MeetCoachSection />
+      <PlanSection />
       <CollabSection
         buttonText="Request FREE Demo"
         text="Collaborate with Wool, allow people to contribute their best!"
