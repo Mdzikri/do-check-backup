@@ -1,6 +1,6 @@
 import { IFact } from "../interface/fact.interface";
-import Stresshed1 from "../assets/images/stresshed.png";
-import Stresshed2 from "../assets/images/stresshed-2.png";
+import Stresshed1 from "../assets/images/stresshed.svg";
+import Stresshed2 from "../assets/images/stresshed-2.svg";
 
 export const factData: IFact[] = [
   {

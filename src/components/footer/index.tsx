@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import WoolLogo from "../../assets/images/logo-blue.png";
 import PhoneIcon from "../../assets/images/icons/phone-icon.png";
 import LetterIcon from "../../assets/images/icons/letter-icon.png";
@@ -24,13 +24,20 @@ export default function Footer() {
           <span className="font-bold">Navigation</span>
           <ul className="md:pt-10 text-[#3e3e3e]">
             <li className="my-2">
-              <Link target="_blank" to="/en/about-us">About Us</Link>
+              <Link target="_blank" to="/en/about-us">
+                About Us
+              </Link>
             </li>
             <li className="my-2">
-              <a href="#">Wool For Company</a>
+              <Link to="/">Wool For Company</Link>
             </li>
             <li className="my-2">
-              <a target="_blank" href={`https://wa.me/${process.env.WA_PHONE_NUMBER}`}>Join as a Coach</a>
+              <a
+                target="_blank"
+                href={`https://wa.me/${process.env.WA_PHONE_NUMBER}`}
+              >
+                Join as a Coach
+              </a>
             </li>
           </ul>
         </div>

@@ -19,7 +19,7 @@ const AboutUs: React.FC<PageProps> = () => {
         text="Wool can help your business thrive. Let's work together"
         buttonText="Call Admin"
         action={() =>
-          (window.location.href = `https://wa.me/${process.env.WA_PHONE_NUMBER}`)
+          window.open(`https://wa.me/${process.env.WA_PHONE_NUMBER}`, "_blank")
         }
       />
     </DefaultLayout>

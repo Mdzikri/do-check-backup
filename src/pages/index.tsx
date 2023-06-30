@@ -28,7 +28,7 @@ const IndexPage: React.FC<PageProps> = () => {
         buttonText="Request FREE Demo"
         text="Collaborate with Wool, allow people to contribute their best!"
         action={() =>
-          (window.location.href = `https://wa.me/${process.env.WA_PHONE_NUMBER}`)
+          window.open(`https://wa.me/${process.env.WA_PHONE_NUMBER}`, "_blank")
         }
       />
       <FaqSection />
