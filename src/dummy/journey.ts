@@ -1,7 +1,7 @@
 import { IJourney } from "../interface/journey.interface";
 import WoolLogo from "../assets/images/logo-blue.png";
 import DoZine from "../assets/images/do-zine-illustration-1.png";
-import DoCheck from "../assets/images/do-check-illustration-1.png";
+import Dozine from "../assets/images/dozine.svg";
 
 export const journeyData: IJourney[] = [
   {
@@ -23,6 +23,6 @@ export const journeyData: IJourney[] = [
     time: 2021,
     description:
       "In 2021, the DoCheck digital platform was born to actively share todo lists with the hope that Millennials and Generation Z can increase productivity with the DoCheck platform and share tacit knowledge with each other",
-    illustration: DoCheck,
+    illustration: Dozine,
   },
 ];

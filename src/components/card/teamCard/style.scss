@@ -5,6 +5,11 @@
   position: relative;
   border-radius: 25px;
   box-shadow: 1px 2px 2px 1px rgb(180, 180, 180, 0.75);
+  transition: all 0.25s ease-in;
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 1px -2px -1px 1px rgb(180, 180, 180, 0.75);
+  }
 }
 
 .team-card-tag {

@@ -7,7 +7,7 @@ const OurValueSection = () => {
   return (
     <section id="section-our-value" className="p-10 md:px-36">
       <Title>Our Value</Title>
-      <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="p-10 grid sm:grid-cols-1 md:grid-cols-3 gap-5">
         {valuesData.map((value) => {
           return (
             <Card
