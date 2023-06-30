@@ -22,7 +22,7 @@ const Accordion: React.FC<DropdownProps> = ({
         className={`rounded-[30px] mt-2 px-5 py-5 flex justify-between items-center font-bold ${
           isOpen
             ? "bg-wool-background-secondary text-wool-blue"
-            : "cursor-pointer shadow-sm"
+            : "cursor-pointer shadow-sm bg-[#fff]"
         }`}
         onClick={onClick}
       >
@@ -50,8 +50,8 @@ const Accordion: React.FC<DropdownProps> = ({
         </div>
       </div>
       <div
-        className={`px-5 py-5 text-[16px] transition ease-out delay-200 ${
-          isOpen ? "relative" : "absolute -translate-y-[100px] -z-50 opacity-0"
+        className={`px-5 py-5 text-[16px] transition ease-out delay-100 ${
+          isOpen ? "relative" : "absolute -translate-x-[100px] -z-50 opacity-0"
         }`}
       >
         {children}
